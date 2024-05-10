@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import SignUpImage from '../assets/3DSignUp.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';  // Ensure Bootstrap CSS is imported
 
-function Login() {
+function SignUp() {
     const [inputs, setInputs] = useState({
         name: '',
         email: '',
@@ -43,7 +43,7 @@ function Login() {
                         <Form.Group className="mb-3">
                             <Form.Control type="password" placeholder="Password" name="password" value={inputs.password} onChange={handleChange} style={inputStyle} />
                         </Form.Group>
-                        <Button variant="primary" type="submit" className="w-100" style={{ backgroundColor: '#D03D18', borderRadius: '12px' }}>Login</Button>
+                        <Button variant="primary" type="submit" className="w-100" style={{ backgroundColor: '#D03D18', borderRadius: '12px' }}>Sign Up</Button>
                     </Form>
                 </Col>
                 <Col md={6} className="d-none d-md-flex justify-content-center align-items-center p-4">
@@ -54,4 +54,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default SignUp;

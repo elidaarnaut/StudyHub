@@ -1,7 +1,8 @@
 import React from 'react';
 //import Login from './pages/Login';
 import SelectProfile from './pages/SelectProfile'; // Make sure this path is correct based on your folder structure
-import Login from './pages/Login';
+
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <header className="App-header">
         {/* Commented the login out, testing select profile */}
       </header>
-      <Login/>
+      <SignUp/>
       
     </div>
   );
