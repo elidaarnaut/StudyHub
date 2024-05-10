@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import SignUpImage from '../assets/3DSignUp.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';  // Ensure Bootstrap CSS is imported
 
-function SignUp() {
+function SignUp1() {
     const [inputs, setInputs] = useState({
         name: '',
         email: '',
@@ -54,4 +54,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default SignUp1;
