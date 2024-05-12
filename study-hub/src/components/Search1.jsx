@@ -5,8 +5,7 @@ import searchImg from "../assets/search.svg"
 function Search1(){
     return(
         <Form>
-            <div>
-                
+            <div className="searchBar1">
                 <FormControl
                     type="text"
                     placeholder="Search"
@@ -14,9 +13,9 @@ function Search1(){
                     aria-label="Search"
                     // ^^ for people with disabilities
                 />
-                <button>
+                <button className="searchButton">
                     {/* slika */}
-                    <img src={searchImg}></img>
+                    <img src={searchImg} className="searchImg"></img>
                 </button>
                 
                     
