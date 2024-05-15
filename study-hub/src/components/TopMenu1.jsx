@@ -8,7 +8,7 @@ function TopMenu1(){
     return(
         <div className="topMenu1div">
             <Search1></Search1>
-            <div>
+            <div >
                 <button className="button">Log in</button>
                 <button className="button">Sign up</button>
             </div>
