@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
 
 .topMenu1div{
-  /* width: 100%; */
+  width: 90%;
   height: 60px;
   background-color: #2D4263;
   padding-left: 5%;
@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 5%;
+  position: absolute;
+  top: 0;
 }
 
 .searchInput{
@@ -68,9 +70,55 @@
   height: 100vh;
 }
 
-.mainText{
-  width: 40%;
+.mainPartHP{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
+
+.mainText{
+  width: 30%;
+  height: 65vh;
+  background-color: rgba(245, 245, 245, 0.7);
+  border-radius: 30px;
+  padding: 20px 50px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5%;
+  padding-bottom: 15px;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.mainText h1 {
+  font-size: 55px;
+  font-family: 'Montserrat';
+  font-weight: 1000;
+  text-align: center;
+  margin-top: 0;
+
+}
+
+.mainText p{
+  text-align: left;
+}
+
+.mainPInvite {
+  font-weight: 700;
+}
+
+.mainPhoto{
+  width: 40%;
+  height: 65vh;
+}
+
+.mainPhoto img{
+  height: 70vh;
+}
+
+
 
 
 /* .App {
