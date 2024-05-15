@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
 .topMenu1div{
-  width: 100%;
+  /* width: 100%; */
   height: 60px;
   background-color: #2D4263;
   padding-left: 5%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 5%;
 }
 
 .searchInput{
@@ -40,6 +44,26 @@
   border-radius: 0 50px 50px 0;
   padding: 0%;
   padding-right: 5px;
+}
+
+.button{
+  background-color: #D03D18;
+  height: 30px;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 10px;
+  color: #F5F5F5;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  justify-self: end;
+}
+
+.buttonsDiv{
+  /* justify-content: ; */
 }
 
 /* .App {
