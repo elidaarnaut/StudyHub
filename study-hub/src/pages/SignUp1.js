@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import SignUpImage from '../assets/3DSignUp.svg';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Ensure Bootstrap CSS is imported
+import 'bootstrap/dist/css/bootstrap.min.css';  
+//this signup is for students ! 
 
 function SignUp1() {
     const [inputs, setInputs] = useState({
@@ -28,6 +29,12 @@ function SignUp1() {
         borderRadius: '12px'
     };
 
+    const linkStyle = {
+        color: '#D03D18', 
+        textDecoration: 'none',
+        fontWeight: '600' 
+    };
+
     return (
         <Container fluid className="min-vh-100 d-flex" style={{ backgroundColor: '#2D4263' }}>
             <Row className="w-100 align-items-center">
@@ -44,6 +51,10 @@ function SignUp1() {
                             <Form.Control type="password" placeholder="Password" name="password" value={inputs.password} onChange={handleChange} style={inputStyle} />
                         </Form.Group>
                         <Button variant="primary" type="submit" className="w-100" style={{ backgroundColor: '#D03D18', borderRadius: '12px' }}>Sign Up</Button>
+                        <div className="text-center mt-3">
+                            <span style={{ color: '#2D4263', fontWeight: '600' }}>Already have an account? </span>
+                            <a href="/login" style={linkStyle}>Log In</a>
+                        </div>
                     </Form>
                 </Col>
                 <Col md={6} className="d-none d-md-flex justify-content-center align-items-center p-4">

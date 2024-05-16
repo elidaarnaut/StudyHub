@@ -1,18 +1,20 @@
 import React from 'react';
-//import Login from './pages/Login';
-import SelectProfile from './pages/SelectProfile'; // Make sure this path is correct based on your folder structure
-
-import SignUp1 from './pages/SignUp1';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import SignUp1 from './pages/SignUp1';
+import SignUp2 from './pages/SignUp2'; // signup for instructors step 1
+import VerificationsUpload from './pages/VerificationsUpload'; // signup for instructors step 2
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* Commented the login out, testing select profile */}
-      </header>
-      <SignUp1/>
-      
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/signup-instructor" element={<SignUp2 />} />
+          <Route path="/verification" element={<VerificationsUpload />} />
+          <Route path="/" element={<SignUp2 />} /> {/* Default route */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
