@@ -1,12 +1,15 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage1 from "./pages/Homepage1";
+import DashboardStudent from './pages/DashboardStudent';
 
 function App() {
   return (
     <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/dashboardStudent" element={<DashboardStudent />} />
+
       </Routes>
     </Router>
 

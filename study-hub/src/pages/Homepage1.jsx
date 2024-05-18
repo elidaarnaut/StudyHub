@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TopMenu1 from "../components/TopMenu1";
 import hpGirl from "../assets/hpGirl.svg";
 
@@ -13,7 +14,11 @@ function Homepage1() {
 We offer personalized profiles, AI-driven grading, and interactive labs, making learning efficient and engaging. </p>
                     <br />
                     <p className="mainPInvite">Join us as we revolutionize education together.</p>
-                    <button className="button">Sign up now</button>
+                    
+                    {/* CHANGE LATER */}
+                    <Link to="/dashboardStudent">
+                        <button className="button">Sign up now</button>
+                    </Link>
 
                 </div>
                 <div className="mainPhoto">
