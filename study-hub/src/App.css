@@ -1,4 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+ /* SEARCH COMPONENT */
+
+ .searchInput{
+  height: 30px;
+  border-radius: 50px 0 0 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 0%;
+  padding-left: 5px;
+
+}
+
+.searchImg {
+  width: 20px;
+  padding: 0%;
+  
+}
+
+.searchBar1{
+  display: flex;
+  align-items: center;
+
+} 
+
+.searchButton {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 0 50px 50px 0;
+  padding: 0%;
+  padding-right: 5px;
+}
 
  /* HOMEPAGE1 */
 .topMenu1div{
@@ -10,7 +47,7 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 5%;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
 }
 
@@ -23,7 +60,7 @@
 .mainPartHP{
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: calc(100vh - 60px);
   align-items: center;
   justify-content: center;
 }
@@ -100,7 +137,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
 }
 
@@ -114,52 +151,21 @@
 .leftItem {
   width: 30%;
 }
-.centerItem{
+.centerItem {
   width: 30%;
   display: flex;
   justify-content: center;
 }
-.rightItem{
+.rightItem {
   width: 30%;
   display: flex;
   justify-content: right;
 }
 
- /* SEARCH COMPONENT */
-
-.searchInput{
-  height: 30px;
-  border-radius: 50px 0 0 50px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 0%;
-  padding-left: 5px;
-
-}
-
-.searchImg {
-  width: 20px;
-  padding: 0%;
-  
-}
-
-.searchBar1{
-  display: flex;
-  align-items: center;
-
-} 
-
-.searchButton {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 0 50px 50px 0;
-  padding: 0%;
-  padding-right: 5px;
+.sDashboardMain {
+  background-color: #ffffff;
+  width: 100%;
+  height: calc(100vh - 60px);
 }
 
  /* USER ICON ON TOP MENU 2 */
@@ -181,3 +187,34 @@
 
 }
 
+.sideMenuDiv {
+  background-color: #EEEEEE;
+  height: calc(100vh - 60px);
+  width: 20%;
+  border-radius: 0px 20px 20px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.sideMenuDiv hr {
+  width: 80%;
+  background-color: #2D4263;
+}
+
+.sideMenuDiv p {
+  color: #2D4263;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.sideMenuTitle {
+  color: #D03D18;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+}
