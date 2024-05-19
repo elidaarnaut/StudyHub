@@ -82,14 +82,16 @@
 .mainText h1 {
   font-size: 55px;
   font-family: 'Montserrat';
-  font-weight: 1000;
+  font-weight: 700;
   text-align: center;
   margin-top: 0;
+  color: #023047;
 
 }
 
 .mainText p{
   text-align: left;
+  color: #023047;
 }
 
 .mainText button{
@@ -166,6 +168,8 @@
   background-color: #ffffff;
   width: 100%;
   height: calc(100vh - 60px);
+  display: flex;
+
 }
 
  /* USER ICON ON TOP MENU 2 */
@@ -187,6 +191,8 @@
 
 }
 
+ /* SIDE MENU  */
+
 .sideMenuDiv {
   background-color: #EEEEEE;
   height: calc(100vh - 60px);
@@ -203,6 +209,7 @@
 .sideMenuDiv hr {
   width: 80%;
   background-color: #2D4263;
+  height: 1px;
 }
 
 .sideMenuDiv p {
@@ -218,3 +225,86 @@
   font-weight: 700;
 
 }
+
+ /* DASHBOARD STUDENT  */
+.next2SideMenuDiv {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.badgesSectionDash {
+  width: 90%;
+  height: auto;
+  color: #2D4263;
+  /* background-color: #023047; */
+}
+
+ /* BADGES COMPONENT */
+
+.badgeDiv {
+  width: 180px;
+  height: 180px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+  /* margin-bottom: -50px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.badgeDiv img {
+  width: 50%;
+  position: relative;
+  bottom: 70px;
+  /* left: 50px; */
+}
+
+.badgeText {
+  margin-top: -60px;
+  text-align: center;
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2D4263;
+  padding: 0px 10px;
+
+}
+
+.badgeText>p:first-of-type {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.mySubjectsDash {
+  width: 90%;
+  height: auto;
+  color: #2D4263;
+  margin-top: 20px;
+
+}
+
+.subjectItemDash {
+  width: 45%;
+  height: 100px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.subjectsListedDash {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
