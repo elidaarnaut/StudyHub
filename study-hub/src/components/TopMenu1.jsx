@@ -1,6 +1,6 @@
 import React from "react";
 import Search1 from "./Search1";
-import Container from 'react-bootstrap/Container';
+import { Link } from "react-router-dom";
 
 import "../App.css"
 
@@ -9,8 +9,8 @@ function TopMenu1(){
         <div className="topMenu1div">
             <Search1></Search1>
             <div >
-                <button className="button">Log in</button>
-                <button className="button">Sign up</button>
+                <Link to="/dashboardInstructor"><button className="button">Log in</button></Link>
+                <Link to="/dashboardAdministrator"><button className="button">Sign up</button></Link>
             </div>
             
         </div>

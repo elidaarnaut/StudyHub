@@ -2,6 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage1 from "./pages/Homepage1";
 import DashboardStudent from './pages/DashboardStudent';
+import DashboardInstructor from './pages/DashboardInstructor';
+import DashboardAdministrator from './pages/DasboardAdministrator';
 
 function App() {
   return (
@@ -9,6 +11,9 @@ function App() {
       <Routes>
       <Route path="/" element={<Homepage1 />} />
       <Route path="/dashboardStudent" element={<DashboardStudent />} />
+      <Route path="/dashboardInstructor" element={<DashboardInstructor />} />
+      <Route path="/dashboardAdministrator" element={<DashboardAdministrator />} />
+
 
       </Routes>
     </Router>
