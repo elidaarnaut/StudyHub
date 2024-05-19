@@ -1,13 +1,11 @@
 import React from "react";
 
-function SideMenu2(){
+function SideMenu3(){
     return(
         <div className="sideMenuDiv">
-            <button className="button">Upload Material</button>
+            <button className="button">Create Course</button>
             <h2 className="sideMenuTitle">EXPLORE</h2>
-            <p>Instructors</p>
-            <p>Courses</p>
-            <p>Subjects</p>
+            <p>My Courses</p>
             <hr />
             <h2 className="sideMenuTitle">MY ACCOUNT</h2>
             <p>Profile</p>
@@ -17,4 +15,4 @@ function SideMenu2(){
     );
 }
 
-export default SideMenu2;
+export default SideMenu3;
