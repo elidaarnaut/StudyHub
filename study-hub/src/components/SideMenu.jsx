@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 function SideMenu(){
     return(
@@ -8,10 +10,10 @@ function SideMenu(){
             <p>Courses</p>
             <p>AI Chat</p>
             <p>Virtal Lab</p>
-            <p>Subjects</p>
+            <Link to="/subjects" className="link"><p>Subjects</p></Link>
             <hr />
             <h2 className="sideMenuTitle">MY ACCOUNT</h2>
-            <p>Profile</p>
+            <Link to="/profile" className="link"><p>Profile</p></Link>
             <p>Settings</p>
             <p>Log out</p>
         </div>

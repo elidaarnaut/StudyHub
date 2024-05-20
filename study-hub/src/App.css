@@ -354,3 +354,66 @@
   margin-bottom: 60px;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.stemSection, .artsSection, .socialSciences{
+  width: 90%;
+  height: auto;
+  color: #2D4263;
+  margin-top: 20px;
+}
+
+ /* SLIDER ITEM  */
+.sliderItem {
+  width: 300px; /* Each slide item takes up one-third of the slider */
+  transition: transform 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #abcbdb;
+  border-radius: 20px;
+}
+
+.sliderContainer{
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hides anything outside the slider */
+}
+
+.slider {
+  display: flex;
+  width: calc(300%); /* Adjust based on number of items you add */
+  transition: transform 0.5s ease-in-out;
+}
+
+.sliderContainer img {
+  width: 30px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.leftArrow {
+  left: 10px;
+}
+
+.rightArrow {
+  right: 10px;
+}
+
+.slider .slideItem:nth-child(2) {
+  transform: scale(1.2); /* Makes the middle item larger */
+}
+

@@ -4,6 +4,8 @@ import Homepage1 from "./pages/Homepage1";
 import DashboardStudent from './pages/DashboardStudent';
 import DashboardInstructor from './pages/DashboardInstructor';
 import DashboardAdministrator from './pages/DasboardAdministrator';
+import SubjectsPage from './pages/SubjectsPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -13,6 +15,11 @@ function App() {
       <Route path="/dashboardStudent" element={<DashboardStudent />} />
       <Route path="/dashboardInstructor" element={<DashboardInstructor />} />
       <Route path="/dashboardAdministrator" element={<DashboardAdministrator />} />
+      <Route path="/subjects" element={<SubjectsPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+
+
+
 
 
       </Routes>
