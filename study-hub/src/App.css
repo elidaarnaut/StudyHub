@@ -417,3 +417,6 @@
   transform: scale(1.2); /* Makes the middle item larger */
 }
 
+.banner{
+  z-index: -1;
+}
