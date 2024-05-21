@@ -560,3 +560,29 @@
   justify-content: space-evenly;
 
 }
+.accSettings {
+  width: 80%;
+}
+
+.functionHeading {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.majorHeading {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.settingsText {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.settingsButton{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
