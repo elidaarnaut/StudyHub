@@ -520,3 +520,43 @@
   align-items: end;
 
 }
+
+.next2SideMenuSettings {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  left: 20%;
+  top: 60px;
+  height: calc(100vh - 60px);
+}
+
+.settingsMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 120px;
+}
+.sMenuContent {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #023047;
+}
+.sMenuContent hr {
+  width: 100%;
+}
+
+.settingsContents {
+  width: calc(95% - 120px);
+  display: flex;
+  justify-content: space-evenly;
+
+}

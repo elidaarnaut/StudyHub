@@ -13,7 +13,7 @@ function SideMenu2(){
             <hr />
             <h2 className="sideMenuTitle">MY ACCOUNT</h2>
             <Link to="/profile" className="link"><p>Profile</p></Link>
-            <p>Settings</p>
+            <Link to="/settings1" className="link"><p>Settings</p></Link>
             <p>Log out</p>
         </div>
     );
