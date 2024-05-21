@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
  /* SEARCH COMPONENT */
 
@@ -235,7 +235,6 @@
   width: 80%;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   position: relative;
   left: 20%;
@@ -419,4 +418,105 @@
 
 .banner{
   z-index: -1;
+  width: 100%;
+}
+
+.profileDiv {
+  width: 100%;
+  display: flex;
+}
+
+.profilePic {
+  width: 100px;
+  position: relative;
+  bottom: 50px;
+  left: 100px;
+}
+
+.profileContents {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #023047;
+  position: relative;
+  bottom: 50px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.profileSides1 {
+  width: 40%;
+}
+
+
+.profileSides2  {
+  width: 35%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sectionDiv {
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.profileBadgeImg {
+  width: 40%;
+  padding: 10px;
+}
+
+.ProfilePicDiv {
+  width: 100%;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profileEmail {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profileBio {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profileBioText {
+  font-weight: 500;
+}
+
+.badgesContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.profileSides2 p{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.overlayProfile {
+  width: 100%;
+  position: absolute;
+  height: 130px;
+  z-index: 1;
+  bottom: 0;  
+  background: linear-gradient(to top, #EEE 20%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
 }
