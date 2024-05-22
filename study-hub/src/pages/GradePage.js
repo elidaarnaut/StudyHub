@@ -19,7 +19,8 @@ function GradePage() {
     fontSize: '28px',
     textAlign: 'center',
     width: '100%',
-    marginTop: "1cm",
+    marginTop: "2cm",
+    fontWeight: 'bold',
   };
 
   const gradeSectionStyle = {
@@ -34,21 +35,24 @@ function GradePage() {
     marginBottom: '10px',
     textAlign: 'center',
     fontWeight: 'bold',
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
   };
 
   const gradeBoxStyle = {
-    backgroundColor: '#2C3E50',
+    backgroundColor: '#2D4263',
     color: 'white',
     padding: '20px',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    width: '80%',
+    width: '70%',
     textAlign: 'center',
   };
 
   const dividerStyle = {
     width: '2px',
-    backgroundColor: '#E0E0E0',
+    backgroundColor: '#00000',
     margin: '0 20px',
     height: '100%',
   };
@@ -57,6 +61,7 @@ function GradePage() {
     margin: '10px 0',
     fontWeight: 'bold',
   };
+
 
   return (
     <Container fluid style={gradePageStyle}>
@@ -69,6 +74,16 @@ function GradePage() {
       <Row style={gradeSectionStyle}>
         <Col xs={12} md={5} className="d-flex flex-column align-items-center">
           <h3 style={schoolTitleStyle}>Primary School</h3>
+        </Col>
+        <Col xs="auto" className="d-flex align-items-center">
+          <div style={dividerStyle}></div>
+        </Col>
+        <Col xs={12} md={5} className="d-flex flex-column align-items-center">
+          <h3 style={schoolTitleStyle}>High School</h3>
+        </Col>
+      </Row>
+      <Row style={gradeSectionStyle}>
+        <Col xs={12} md={5} className="d-flex flex-column align-items-center">
           <Card style={gradeBoxStyle}>
             <Card.Body>
               <Card.Text style={cardTextStyle}>1st Grade</Card.Text>
@@ -83,9 +98,10 @@ function GradePage() {
             </Card.Body>
           </Card>
         </Col>
-        <div style={dividerStyle}></div>
+        <Col xs="auto" className="d-flex align-items-center">
+          <div style={dividerStyle}></div>
+        </Col>
         <Col xs={12} md={5} className="d-flex flex-column align-items-center">
-          <h3 style={schoolTitleStyle}>High School</h3>
           <Card style={gradeBoxStyle}>
             <Card.Body>
               <Card.Text style={cardTextStyle}>1st Grade</Card.Text>
