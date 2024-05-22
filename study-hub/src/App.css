@@ -605,6 +605,7 @@
 }
 .accSettings {
   width: 95%;
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
 
 .functionHeading {
@@ -613,7 +614,7 @@
 }
 
 .functionHeading:first-of-type{
-  margin-top: 0px;
+  margin-top: 40px;
 }
 
 .majorHeading {
@@ -622,7 +623,7 @@
 }
 
 .settingsText {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -649,16 +650,16 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
 .changeProfilePicDiv img {
-  width: 100px;
+  width: 120px;
 }
 
 .changeProfilePicText{
-  width: calc(95% - 100px);
+  width: calc(95% - 120px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -712,4 +713,24 @@ input[type="submit"] {
 label {
   display: block;
   margin-bottom: 5px;
+}
+
+.accSettings label {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.accSettings .button {
+  padding: 20px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.saveChangesDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }

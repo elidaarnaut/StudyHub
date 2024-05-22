@@ -25,7 +25,7 @@ function SettingsPage2(){
                         <div className="changeProfilePicDiv">
                             <img src={profilePic} alt="Profile Picture" />
                             <div className="changeProfilePicText">
-                                <p>Update your profile photo to personalize your account. Choose a photo that represents you best!</p>
+                                <p className="settingsText">Update your profile photo to personalize your account. Choose a photo that represents you best!</p>
                                 <button className="button">Upload Photo</button>
                             </div>
                         </div>
@@ -55,7 +55,11 @@ function SettingsPage2(){
                         <button className="button">Upload Photo</button>
                         <br />
                         <hr />
-                        <button className="button">Save Changes</button>
+                        <br />
+                        <div className='saveChangesDiv'>
+                            <button className="button">Save Changes</button>
+  
+                        </div>
 
                     </div>
                 </div>
