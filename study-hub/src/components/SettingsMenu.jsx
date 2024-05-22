@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../App.css";
+
 
 function SettingsMenu(){
     return(
         <div className="settingsMenu">
-            <hr />
             <div className="sMenuContent">
-                <p>Account</p>
+                <Link to="/settings1" className="link"><p>Account</p></Link>
                 <hr />
-                <p>Profile</p>
+                <Link to="/settings2" className="link"><p>Profile</p></Link>
                 <hr />
-                <p>Support and Help</p>
+                <Link to="/settings3" className="link"><p>Support and Help</p></Link>
             </div>
         </div>
     );

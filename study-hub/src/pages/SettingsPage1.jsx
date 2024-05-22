@@ -27,8 +27,9 @@ function SettingsPage1(){
                         <button className="button settingsButton">Delete Account</button>
                     </div>
                 </div>
+                <hr className="hrSetting"/>
                 <SettingsMenu></SettingsMenu>
-                
+
             </div>
         </div>
     );
