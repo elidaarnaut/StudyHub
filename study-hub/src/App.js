@@ -6,13 +6,13 @@ import SignUp2 from './pages/SignUp2'; // signup for instructors step 1
 import VerificationsUpload from './pages/VerificationsUpload'; // signup for instructors step 2
 import GradePage from './pages/GradePage';
 import DashboardInstructor from './pages/DashboardInstructor'; // Import the DashboardInstructor component
-
+import UnitsPage from './pages/UnitsPage';
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          
+        <Route path="/units-page" element={<UnitsPage />} />
         <Route path="/grade-page" element={<GradePage />} />
           <Route path="/select-profile" element={<SelectProfile />} />
           <Route path="/signup-student" element={<SignUp1 />} />
