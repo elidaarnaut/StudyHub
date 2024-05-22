@@ -4,6 +4,51 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TopMenu2 from '../components/TopMenu2';
 import angle from '../assets/angle.png'; 
 
+//css for units button as component, also need to transfer 
+const unitButtonStyle = {
+  backgroundColor: '#2D4263',
+  color: 'white',
+  padding: '30px 20px',
+  borderRadius: '20px',
+  border: 'none',
+  fontSize: '20px',
+  margin: '10px',
+  width: '70%',
+  textAlign: 'center',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  position: 'relative',
+  transition: 'background-color 0.3s ease', 
+};
+
+const angleImageStyle = {
+  position: 'absolute',
+  right: '50px',
+  top: '50%',
+  transform: 'translateY(-50%)',
+  cursor: 'pointer',
+};
+
+// UnitButton as component, will transfer it later 
+
+function UnitButton({ onClick }) {
+  return (
+    <Button
+      style={unitButtonStyle}
+      onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1B2E4B'}
+      onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2D4263'}
+    >
+      Unit
+      <img
+        src={angle}
+        alt="angle"
+        style={angleImageStyle}
+        onClick={onClick}
+      />
+    </Button>
+  );
+}
+
+// Main UnitsPage Component
 function UnitsPage() {
   const pageStyle = {
     fontFamily: 'Arial, sans-serif',
@@ -23,28 +68,6 @@ function UnitsPage() {
     marginLeft: '20px',
   };
 
-  const unitButtonStyle = {
-    backgroundColor: '#2D4263',
-    color: 'white',
-    padding: '30px 20px',  // Increased padding to make the buttons taller
-    borderRadius: '20px',
-    border: 'none',
-    fontSize: '20px',
-    margin: '10px',
-    width: '70%',
-    textAlign: 'center',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    position: 'relative', 
-  };
-
-  const angleImageStyle = {
-    position: 'absolute',
-    right: '10px',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    cursor: 'pointer',
-  };
-
   const colStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -61,154 +84,24 @@ function UnitsPage() {
       </Row>
       <Row>
         <Col xs={12} md={6} style={colStyle}>
-            
-          <Button style={unitButtonStyle}> 
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} // i need to put handler logic here
-            />
-          </Button>
-          
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} // i need to make this unit button a component also, that way making code more readable
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
         </Col>
         <Col xs={12} md={6} style={colStyle}>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')}
-            />
-          </Button>
-          <Button style={unitButtonStyle}>
-            Unit
-            <img 
-              src={angle} 
-              alt="angle" 
-              style={angleImageStyle} 
-              onClick={() => alert('Angle clicked!')} 
-            />
-          </Button>
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
+          <UnitButton onClick={() => alert('Angle clicked!')} />
         </Col>
       </Row>
     </Container>
