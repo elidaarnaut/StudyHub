@@ -202,21 +202,8 @@
 
  /* USER ICON ON TOP MENU 2 */
 
-.userIcon {
-  background-color: #2D4263;
-  border-radius: 50px;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-self:right
-}
-
-.userIcon img{
+.menuPic {
   height: 25px;
-  filter: brightness(0) invert(1);
-
 }
 
  /* SIDE MENU  */
