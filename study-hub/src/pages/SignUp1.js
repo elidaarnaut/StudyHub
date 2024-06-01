@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import SignUpImage from '../assets/3DSignUp.svg';
+import { registerStudent } from '../services/apiService';
 import 'bootstrap/dist/css/bootstrap.min.css';  
-//this signup is for students ! 
 
 function SignUp1() {
     const [inputs, setInputs] = useState({
@@ -11,15 +12,26 @@ function SignUp1() {
         password: ''
     });
 
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+    const navigate = useNavigate(); // Use useNavigate for navigation
+
     const handleChange = (event) => {
         const { name, value } = event.target;
         setInputs(prevState => ({ ...prevState, [name]: value }));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(inputs);
-        // login logic will need it later
+        try {
+            await registerStudent(inputs);
+            setSuccess('Student registered successfully');
+            setError('');
+            navigate('/dashboardStudent'); // Redirect to the dashboard
+        } catch (error) {
+            setError(error.message || 'Error registering student');
+            setSuccess('');
+        }
     };
 
     const inputStyle = {
@@ -51,6 +63,8 @@ function SignUp1() {
                             <Form.Control type="password" placeholder="Password" name="password" value={inputs.password} onChange={handleChange} style={inputStyle} />
                         </Form.Group>
                         <Button variant="primary" type="submit" className="w-100" style={{ backgroundColor: '#D03D18', borderRadius: '12px' }}>Sign Up</Button>
+                        {error && <p className="text-danger mt-3">{error}</p>}
+                        {success && <p className="text-success mt-3">{success}</p>}
                         <div className="text-center mt-3">
                             <span style={{ color: '#2D4263', fontWeight: '600' }}>Already have an account? </span>
                             <a href="/login" style={linkStyle}>Log In</a>
