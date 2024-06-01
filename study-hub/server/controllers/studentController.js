@@ -2,11 +2,11 @@ const Student = require('../models/Student');
 
 // Get student dashboard
 exports.getDashboard = (req, res) => {
-    // Assuming you have some logic to get the student's data
+    // for students data in dashboard, later will be used 
     res.send('Welcome to the Student Dashboard');
 };
 
-// Register a new student
+// registering new student
 exports.register = async (req, res) => {
     const { name, email, password } = req.body;
     try {

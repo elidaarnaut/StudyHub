@@ -6,9 +6,9 @@ const studentRoutes = require('./routes/studentRoutes');
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // For parsing application/json
+app.use(express.json()); 
 
-// Connect to MongoDB
+// Connecting to MongoDB ! <3 
 mongoose.connect(process.env.MONGODB_URI, {
     bufferCommands: false,
     serverSelectionTimeoutMS: 5000,
@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('Error connecting to MongoDB:', err);
 });
 
-// Use the student routes
+//  student routes
 app.use('/students', studentRoutes);
 
 const PORT = process.env.PORT || 3000;
