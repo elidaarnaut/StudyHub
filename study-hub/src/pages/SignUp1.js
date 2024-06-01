@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import SignUpImage from '../assets/3DSignUp.svg';
-import { registerStudent } from '../services/apiService'; // we need to import functions in order to connect back to frontend 
+import { registerStudent } from '../services/apiService';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
 function SignUp1() {
@@ -13,6 +14,7 @@ function SignUp1() {
 
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const navigate = useNavigate(); // Use useNavigate for navigation
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -22,9 +24,10 @@ function SignUp1() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await registerStudent(inputs);
+            await registerStudent(inputs);
             setSuccess('Student registered successfully');
             setError('');
+            navigate('/dashboardStudent'); // Redirect to the dashboard
         } catch (error) {
             setError(error.message || 'Error registering student');
             setSuccess('');
