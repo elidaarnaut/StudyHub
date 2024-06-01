@@ -1,4 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+/* Styles the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+/* Styles the track (part the thumb travels within) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  /* color of the track */
+
+}
+
+/* Styles the thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  /* background: #888;  */
+  /* color of the thumb */
+  background: linear-gradient(#D03D18,#023047,#D03D18);
+
+}
+
+/* Styles the thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color when hovering over the thumb */
+}
+
 
  /* SEARCH COMPONENT */
 
@@ -235,7 +261,6 @@
   width: 80%;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   position: relative;
   left: 20%;
@@ -354,8 +379,17 @@
   margin-bottom: 60px;
 }
 
-.link {
+.link  {
   text-decoration: none;
+}
+
+.link:visited {
+  text-decoration: none;
+  color: #023047;
+}
+
+.link:hover {
+  color: #D03D18;
 }
 
 .stemSection, .artsSection, .socialSciences{
@@ -417,3 +451,376 @@
   transform: scale(1.2); /* Makes the middle item larger */
 }
 
+.banner{
+  z-index: -1;
+  width: 100%;
+}
+
+.profileDiv {
+  width: 100%;
+  display: flex;
+}
+
+.profilePic {
+  width: 100px;
+  position: relative;
+  bottom: 50px;
+  left: 100px;
+}
+
+.profileContents {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #023047;
+  position: relative;
+  bottom: 50px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.profileSides1 {
+  width: 40%;
+}
+
+
+.profileSides2  {
+  width: 35%;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sectionDiv {
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.profileBadgeImg {
+  width: 40%;
+  padding: 10px;
+}
+
+.ProfilePicDiv {
+  width: 100%;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profileEmail {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profileBio {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profileBioText {
+  font-weight: 500;
+}
+
+.badgesContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.profileSides2 p{
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.overlayProfile {
+  width: 100%;
+  position: absolute;
+  height: 130px;
+  z-index: 1;
+  bottom: 0;  
+  background: linear-gradient(to top, #EEE 20%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+}
+
+.next2SideMenuSettings {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  position: relative;
+  left: 20%;
+  top: 60px;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+
+.settingsMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 120px;
+  color: #023047;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+.sMenuContent {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 80%;
+  text-align: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #023047;
+}
+.sMenuContent hr {
+  width: 100%;
+}
+
+.settingsContents {
+  width: calc(85% - 125px);
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  color: #023047;
+
+}
+.accSettings {
+  width: 95%;
+  font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+
+.functionHeading {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+
+.majorHeading {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.settingsText {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.settingsButton{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hrSetting {
+  height: 80%;
+  margin: 0px;
+}
+
+.accSettings hr{
+  width: 100%;
+}
+
+.changeProfilePicDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.changeProfilePicDiv img {
+  width: 120px;
+}
+
+.changeProfilePicText{
+  width: calc(95% - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 5px 10px;
+  width: 50%;
+}
+/* 
+.input-container input:focus{
+  background-color: white;
+} */
+
+#nickname {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 16px;
+  background-color: #FFF;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  color: #D03D18;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Styling for the label for better alignment */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.accSettings label {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.accSettings .button {
+  padding: 20px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+.saveChangesDiv {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.accordion-toggle {
+  background: #eee;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 10px 10px 0px 0px;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #023047;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.accordion-content {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item {
+  margin-bottom: 5px;
+}
+
+/* Basic styling for the form container */
+.contact-form {
+  width: calc(100% - 40px);
+  margin: 20px 0px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Styling for headings inside the form for clear sectioning */
+.contact-form h2 {
+  font-size: 24px;
+  color: #023047;
+  text-align: left;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Style adjustments for groupings of form inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* General styles for input fields */
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px; /* Spacing between label and input */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+/* Enhancing the textarea to accommodate more content visually */
+.contact-form textarea {
+  height: 120px; /* Larger area for content */
+  resize: none; /* Disables resizing */
+}
+
+/* Style for the submit button to make it stand out */
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #D03D18; /* A deep blue, you can adjust this color */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Hover effect for button to give feedback to users */
+.contact-form button:hover {
+  background-color: #003875; /* Slightly darker on hover */
+}
+
+/* Ensure that labels are clear and legible */
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}

@@ -1,27 +1,35 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SelectProfile from './pages/SelectProfile';
-import SignUp1 from './pages/SignUp1'; // signup for students
-import SignUp2 from './pages/SignUp2'; // signup for instructors step 1
-import VerificationsUpload from './pages/VerificationsUpload'; // signup for instructors step 2
-import GradePage from './pages/GradePage';
-import DashboardInstructor from './pages/DashboardInstructor'; // Import the DashboardInstructor component
-import UnitsPage from './pages/UnitsPage';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage1 from "./pages/Homepage1";
+import DashboardStudent from './pages/DashboardStudent';
+import DashboardInstructor from './pages/DashboardInstructor';
+import DashboardAdministrator from './pages/DasboardAdministrator';
+import SubjectsPage from './pages/SubjectsPage';
+import ProfilePage from './pages/ProfilePage';
+import SettingsPage1 from './pages/SettingsPage1';
+import SettingsPage2 from './pages/SettingsPage2';
+import SettingsPage3 from './pages/SettingsPage3';
+
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Routes>
-        <Route path="/units-page" element={<UnitsPage />} />
-        <Route path="/grade-page" element={<GradePage />} />
-          <Route path="/select-profile" element={<SelectProfile />} />
-          <Route path="/signup-student" element={<SignUp1 />} />
-          <Route path="/signup-instructor" element={<SignUp2 />} />
-          <Route path="/verification" element={<VerificationsUpload />} />
-          <Route path="/dashboard-instructor" element={<DashboardInstructor />} /> {/* Add the route for DashboardInstructor */}
-          <Route path="/" element={<SelectProfile />} /> {/* Default route */}
-        </Routes>
-      </div>
+      <Routes>
+      <Route path="/" element={<Homepage1 />} />
+      <Route path="/dashboardStudent" element={<DashboardStudent />} />
+      <Route path="/dashboardInstructor" element={<DashboardInstructor />} />
+      <Route path="/dashboardAdministrator" element={<DashboardAdministrator />} />
+      <Route path="/subjects" element={<SubjectsPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/settings1" element={<SettingsPage1 />} />
+      <Route path="/settings2" element={<SettingsPage2 />} />
+      <Route path="/settings3" element={<SettingsPage3 />} />
+
+
+
+
+
+
+      </Routes>
     </Router>
   );
 }
