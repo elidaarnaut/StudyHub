@@ -9,7 +9,7 @@ function DashboardStudent(){
         <div >
             <TopMenu2></TopMenu2>
             <div className="sDashboardMain">
-                <SideMenu></SideMenu>
+                {/* <SideMenu></SideMenu> */}
                 <div className="next2SideMenuDiv">
                     <div className="badgesSectionDash">
                         <h1>My Badges</h1>
