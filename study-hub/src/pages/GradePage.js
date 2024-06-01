@@ -58,7 +58,7 @@ function GradePage() {
     textAlign: 'center',
   };
 
-  //const hrStyle = {
+  //const hrStyle = { i do not needd this for now
     //width: '2px',
     //backgroundColor: '#2D4263',
     //margin: '0 20px',
