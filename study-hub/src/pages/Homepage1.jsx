@@ -16,7 +16,7 @@ We offer personalized profiles, AI-driven grading, and interactive labs, making 
                     <p className="mainPInvite">Join us as we revolutionize education together.</p>
                     
                     {/* CHANGE LATER */}
-                    <Link to="/dashboardStudent">
+                    <Link to="/selectProfile">
                         <button className="button">Sign up now</button>
                     </Link>
 

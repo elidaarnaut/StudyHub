@@ -10,7 +10,7 @@ function TopMenu1(){
             {/* <Search1></Search1> */}
             <div >
                 <Link to="/dashboardInstructor"><button className="button">Log in</button></Link>
-                <Link to="/dashboardAdministrator"><button className="button">Sign up</button></Link>
+                <Link to="/selectProfile"><button className="button">Sign up</button></Link>
             </div>
             
         </div>
