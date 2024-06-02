@@ -1,13 +1,13 @@
 import React from "react";
-import TopMenu2 from "../components/TopMenu2";
+import TopMenu4 from "../components/TopMenu4";
 import SideMenu3 from "../components/SideMenu3";
 
 function DashboardInstructor(){
     return(
         <div>
-            <TopMenu2></TopMenu2>
-            <div>
-                <SideMenu3></SideMenu3>
+            <TopMenu4></TopMenu4>
+            <div className="sDashboardMain">
+                {/* <SideMenu3></SideMenu3> */}
                 <div className="next2SideMenuDiv">
                     <div className="notificationsSectionDash">
                         <h1>Notifications</h1>

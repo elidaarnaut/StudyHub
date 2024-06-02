@@ -216,6 +216,7 @@
   height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
+  width: 100vw;
 
 }
 
@@ -870,6 +871,7 @@ label {
   font-size: 36px;
   margin-left: 50px;
   color: #ccc;
+  padding: 0px;
 }
 
 .sidebar .closebtn:hover {
@@ -908,7 +910,11 @@ label {
   padding-left: 30px;
 }
 
-
+#menuCreateCourse {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* padding: 10px 10px; */
+}
 
 
 

@@ -1,13 +1,13 @@
-//  TOP MENU FOR STUDENTS
+//  TOP MENU FOR INSTRUCTOR
 
 import React from "react";
 import Search1 from "./Search1";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar3";
 import menuPic from "../assets/menu.svg";
 
 import "../App.css"
 
-function TopMenu2(){
+function TopMenu4(){
 
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -26,4 +26,4 @@ function TopMenu2(){
   );
 }
 
-export default TopMenu2;
+export default TopMenu4;
