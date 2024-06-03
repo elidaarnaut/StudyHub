@@ -1,3 +1,5 @@
+//  SIDEBAR FOR ADMIN
+
 import React, { useState } from 'react';
 import menuPic from "../assets/menu.svg";
 import { Link } from "react-router-dom";

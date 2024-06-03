@@ -10,10 +10,10 @@ function TopMenu1(){
     return(
         <div className="topMenu1div">
             {/* <Search1></Search1> */}
-            <div >
-                <Link to="/dashboardInstructor"><button className="button">Log in</button></Link>
-                <Link to="/selectProfile"><button className="button">Sign up</button></Link>
-            </div>
+            
+            <Link to="/dashboardInstructor" className="noLink"><button className="button">Log in</button></Link>
+            <Link to="/selectProfile" className="noLink"><button className="button">Sign up</button></Link>
+            
             
         </div>
     );
