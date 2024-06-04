@@ -17,7 +17,7 @@ import GradePage from './pages/GradePage';
 import UnitsPage from './pages/UnitsPage';
 import InstructorsPage from './pages/InstructorsPage';
 import CoursesPage from './pages/CoursesPage';
-
+import BadgesPage from './pages/BadgesPage';
 
 function App() {
   return (
@@ -40,6 +40,8 @@ function App() {
       <Route path="/unitspage" element={<UnitsPage />} />
       <Route path="/instructors" element={<InstructorsPage />} />
       <Route path="/courses" element={<CoursesPage />} />
+      <Route path="/badgesPage" element={<BadgesPage />} />
+
 
 
       

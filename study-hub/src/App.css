@@ -274,7 +274,7 @@
 }
 
  /* DASHBOARD STUDENT  */
-.next2SideMenuDiv {
+.next2SideMenuDiv, .next2SideMenuDivProfile {
   width: 90%;
   display: flex;
   align-items: center;
@@ -284,6 +284,13 @@
   /* left: 20%; */
   top: 60px;
 }
+
+.next2SideMenuDivProfile {
+  margin: 0px;
+  width: 100vw;
+  align-items: center;
+}
+
 
 .badgesSectionDash {
   width: 90%;
@@ -558,6 +565,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  position: relative;
   
 }
 
@@ -593,6 +601,11 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.seeMoreLink, .seeMoreLink:any-link  {
+  color: #023047;
+  text-decoration: none;
 }
 
 .profileSides2 p{
@@ -887,7 +900,7 @@ label {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 20 !important;
   top: 0;
   left: 0;
   background-color: #111;
@@ -945,7 +958,7 @@ label {
 }
 
 .openbtn:hover {
-  background-color: #2D4263;
+  background-color: #b82f0d;
   ;
 }
 
@@ -1065,6 +1078,32 @@ label {
    .subjectItemDash {
     width: 95%;
    }
+
+   .ProfilePicDiv {
+    display: flex;
+    align-content: center;
+   }
   
+   .profilePic {
+    margin: auto;
+    left: 0px;
+   }
+
+   .profileContents {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+   }
+
+   .profileSides1 {
+    width: 90%;
+   }
+
+   .profileSides2 {
+    width: 90%;
+   }
+
 
 }

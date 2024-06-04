@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TopMenu2 from "../components/TopMenu2";
 import SideMenu from "../components/SideMenu";
 import banner from "../assets/banner.svg";
@@ -9,8 +10,8 @@ function ProfilePage(){
     return(
         <div>
             <TopMenu2></TopMenu2>
-            <SideMenu></SideMenu>
-            <div className="next2SideMenuDiv">
+            {/* <SideMenu></SideMenu> */}
+            <div className="next2SideMenuDivProfile">
                 <img src={banner} alt="Banner" className="banner" />
                 <div className="ProfilePicDiv">                
                     <img src={profilePic} alt="Profile Picture" className="profilePic"/>
@@ -35,9 +36,10 @@ function ProfilePage(){
                             <img src={newcomerBadge} alt="Badge Image" className="profileBadgeImg" />
                             <img src={newcomerBadge} alt="Badge Image" className="profileBadgeImg" />
                             <img src={newcomerBadge} alt="Badge Image" className="profileBadgeImg" />
+                            
                         </div>
                         <div className="overlayProfile">
-                                <p>See More</p>
+                            <Link to="/badgesPage" className="noLink seeMoreLink"> <p>See More</p></Link>
                         </div>
                         
                     </div>

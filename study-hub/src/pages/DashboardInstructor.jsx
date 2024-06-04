@@ -11,7 +11,7 @@ function DashboardInstructor(){
                 <div className="next2SideMenuDiv">
                     <div className="notificationsSectionDash">
                         <h1>Notifications</h1>
-                        {/* <hr /> */}
+                        <hr className="dashHr"/>
                         <div className="notificationsBoard">
 
                         </div>
