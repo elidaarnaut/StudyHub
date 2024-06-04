@@ -3,14 +3,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
-//const chatbotRoutes = require('./routes/chatbot');
+const instructorRoutes = require('./routes/instructorRoutes');
+// const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-// Log to confirm environment variables are loaded
-//console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
+// Middleware
+app.use(cors());
+app.use(express.json()); // Ensure this is before route definitions
 
 // Connecting to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
@@ -28,8 +28,11 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Student routes
 app.use('/students', studentRoutes);
 
+// Instructor routes
+app.use('/instructors', instructorRoutes);
+
 // Chatbot routes
-//app.use('/chatbot', chatbotRoutes);
+// app.use('/chatbot', chatbotRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

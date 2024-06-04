@@ -24,7 +24,7 @@ function SignUp2() {
     event.preventDefault();
     console.log(inputs);
     // sign up logic will need it later
-    navigate('/verification');
+    navigate('/verifications');
   };
 
   const inputStyle = {

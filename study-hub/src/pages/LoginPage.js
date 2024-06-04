@@ -14,7 +14,7 @@ function LoginPage() {
 
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
-    const navigate = useNavigate(); // Use useNavigate for navigation
+    const navigate = useNavigate(); 
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -24,12 +24,12 @@ function LoginPage() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await registerStudent(inputs);
-            setSuccess('Student registered successfully');
+            await registerStudent(inputs); //need to add this to be loginstudent
+            setSuccess('Logging in sucessful');
             setError('');
             navigate('/dashboardStudent'); // Redirect to the dashboard
         } catch (error) {
-            setError(error.message || 'Error registering student');
+            setError(error.message || 'Logging in unsucessful ');
             setSuccess('');
         }
     };
@@ -65,7 +65,7 @@ function LoginPage() {
                         {success && <p className="text-success mt-3">{success}</p>}
                         <div className="text-center mt-3">
                             <span style={{ color: '#2D4263', fontWeight: '600' }}>Don't have an account? </span>
-                            <a href="/login" style={linkStyle}>Sign In</a>
+                            <a href="/selectProfile" style={linkStyle}>Sign In</a>
                         </div>
                     </Form>
                 </Col>

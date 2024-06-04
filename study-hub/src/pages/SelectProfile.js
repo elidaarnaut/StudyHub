@@ -49,11 +49,11 @@ function SelectProfile() {
     };
 
     const handleInstructorClick = () => {
-        navigate('/signup-instructor');
+        navigate('/signup2');
     };
 
     const handleStudentClick = () => {
-        navigate('/signup-student');
+        navigate('/signup1');
     };
 
     return (
