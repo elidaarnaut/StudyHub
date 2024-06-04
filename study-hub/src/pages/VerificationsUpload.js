@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import VerificationImage from '../assets/3DSignUp.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';  
@@ -7,6 +7,7 @@ import { completeInstructorRegistration } from '../services/apiService'; // Impo
 
 function VerificationsUpload() {
   const { id } = useParams(); // Get the instructor ID from the URL
+  const navigate = useNavigate(); // Initialize useNavigate hook
   const [inputs, setInputs] = useState({
     cv: null,
     education: '',
@@ -32,6 +33,7 @@ function VerificationsUpload() {
     try {
       await completeInstructorRegistration(id, formData);
       alert('Verification complete');
+      navigate('/dashboardInstructor'); 
     } catch (error) {
       console.error('Error completing registration', error);
     }
