@@ -1,6 +1,5 @@
 import React from "react";
 import TopMenu2 from "../components/TopMenu2";
-import SideMenu from "../components/SideMenu";
 import Badges from "../components/Badges";
 import MySubjectsDash from "../components/MySubjectDash";
 
@@ -9,7 +8,6 @@ function DashboardStudent(){
         <div >
             <TopMenu2></TopMenu2>
             <div className="sDashboardMain">
-                {/* <SideMenu></SideMenu> */}
                 <div className="next2SideMenuDiv">
                     <div className="badgesSectionDash">
                         <h1 className="instructorsTitle">My Badges</h1>

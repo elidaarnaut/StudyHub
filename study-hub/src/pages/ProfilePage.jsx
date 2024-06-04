@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TopMenu2 from "../components/TopMenu2";
-import SideMenu from "../components/SideMenu";
 import banner from "../assets/banner.svg";
 import profilePic from "../assets/profilePic.svg";
 import newcomerBadge from "../assets/newcomerBadge.svg";
@@ -10,7 +9,6 @@ function ProfilePage(){
     return(
         <div>
             <TopMenu2></TopMenu2>
-            {/* <SideMenu></SideMenu> */}
             <div className="next2SideMenuDivProfile">
                 <img src={banner} alt="Banner" className="banner" />
                 <div className="ProfilePicDiv">                
