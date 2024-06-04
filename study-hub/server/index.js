@@ -3,12 +3,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
+//const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
 app.use(cors());
-app.use(express.json()); 
+app.use(express.json());
 
-// Connecting to MongoDB ! <3 
+// Log to confirm environment variables are loaded
+//console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY);
+
+// Connecting to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
     bufferCommands: false,
     serverSelectionTimeoutMS: 5000,
@@ -21,8 +25,11 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('Error connecting to MongoDB:', err);
 });
 
-//  student routes
+// Student routes
 app.use('/students', studentRoutes);
+
+// Chatbot routes
+//app.use('/chatbot', chatbotRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

@@ -15,6 +15,8 @@ import SignUp2 from './pages/SignUp2'; // signup for instructors step 1
 import VerificationsUpload from './pages/VerificationsUpload'; // signup for instructors step 2
 import GradePage from './pages/GradePage';
 import UnitsPage from './pages/UnitsPage';
+import Chatbot from './pages/Chatbot';
+import LoginPage from './pages/LoginPage';
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/chatbot" element={<Chatbot />} />
       <Route path="/dashboardStudent" element={<DashboardStudent />} />
       <Route path="/dashboardInstructor" element={<DashboardInstructor />} />
       <Route path="/dashboardAdministrator" element={<DashboardAdministrator />} />
