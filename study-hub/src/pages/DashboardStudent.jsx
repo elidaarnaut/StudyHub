@@ -13,12 +13,12 @@ function DashboardStudent(){
                 <div className="next2SideMenuDiv">
                     <div className="badgesSectionDash">
                         <h1>My Badges</h1>
-                        <hr />
+                        <hr className="dashHr"/>
                         <Badges></Badges>
                     </div>
                     <div className="mySubjectsDash">
                         <h1>My Subjects</h1>
-                        <hr />
+                        <hr  className="dashHr"/>
                         <div className="subjectsListedDash">
                             <MySubjectsDash></MySubjectsDash>
                             <MySubjectsDash></MySubjectsDash>

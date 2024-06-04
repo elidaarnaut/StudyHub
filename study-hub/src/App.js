@@ -15,6 +15,8 @@ import SignUp2 from './pages/SignUp2'; // signup for instructors step 1
 import VerificationsUpload from './pages/VerificationsUpload'; // signup for instructors step 2
 import GradePage from './pages/GradePage';
 import UnitsPage from './pages/UnitsPage';
+import InstructorsPage from './pages/InstructorsPage';
+import CoursesPage from './pages/CoursesPage';
 
 
 function App() {
@@ -36,6 +38,10 @@ function App() {
       <Route path="/verifications" element={<VerificationsUpload/>} />
       <Route path="/gradepage" element={<GradePage />} />
       <Route path="/unitspage" element={<UnitsPage />} />
+      <Route path="/instructors" element={<InstructorsPage />} />
+      <Route path="/courses" element={<CoursesPage />} />
+
+
       
 
 

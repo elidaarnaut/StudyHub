@@ -19,14 +19,17 @@ function Sidebar3({ toggleNav }) {  // Receive toggleNav as a prop
       <div id="mySidebar" className="sidebar" style={{ width: isOpen ? '250px' : '0' }}>
         <a href="javascript:void(0)" className="closebtn" onClick={handleToggleNav}>×</a>
         
-        <button className="button" id='menuCreateCourse'>Create Course</button>
-        <h2 className="sideMenuTitle">EXPLORE</h2>
-        <Link><p>My Courses</p></Link>
-        <hr />
-        <h2 className="sideMenuTitle">MY ACCOUNT</h2>
-        <Link to="/profile" className="link"><p>Profile</p></Link>
-        <Link to="/settings1" className="link"><p>Settings</p></Link>
-        <Link><p>Log out</p></Link>
+        <div className='sidebarContents'>
+          <button className="button" id='menuCreateCourse'>Create Course</button>
+          <h2 className="sideMenuTitle">EXPLORE</h2>
+          <Link><p>My Courses</p></Link>
+          <hr className='sidebarHr' />
+          <h2 className="sideMenuTitle">MY ACCOUNT</h2>
+          <Link to="/profile" className="link"><p>Profile</p></Link>
+          <Link to="/settings1" className="link"><p>Settings</p></Link>
+          <Link><p>Log out</p></Link>
+        </div>
+      
 
       </div>
 
