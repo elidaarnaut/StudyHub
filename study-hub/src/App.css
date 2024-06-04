@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
+* {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
 /* Styles the entire scrollbar */
 ::-webkit-scrollbar {
   display: none;
@@ -975,6 +979,69 @@ label {
   /* padding: 10px 10px; */
 }
 
+/* INSTRUCTORS PAGE */
+
+.instructorsSectionDash {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructorsTitle {
+  text-align: left;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #023047;
+  padding-top: 10px;
+}
+
+.instructorCardLayout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* INSTRUCTOR CARD */
+
+.instructorCard {
+  width: 48%;
+  height: 200px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.instructorImgContainer {
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.instructorImgContainer img{
+  width: 100%;
+  
+}
+
+.instructorName {
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.instructorText {
+  width: calc(100% - 30px - 15px - 170px);
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  /* does not look like i want it to  */
+}
+
 
 
 /* Responsive adjustment */
@@ -1105,5 +1172,27 @@ label {
     width: 90%;
    }
 
+   /* INSTRUCTOR CARD */
+
+   .instructorCard {
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+    
+    
+   }
+
+   
+
+   .instructorImgContainer {
+    width: 100%;
+    height: fit-content;
+   }
+
+   .instructorText{
+    width: 100%;
+    height: 25%;
+    overflow: scroll;
+   }
 
 }
