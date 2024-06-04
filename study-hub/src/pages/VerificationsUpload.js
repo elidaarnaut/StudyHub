@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import VerificationImage from '../assets/3DSignUp.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';  
-
-// This verification page is step 2 for instructors to register to the page.
+import { completeInstructorRegistration } from '../services/apiService'; // Import the API service
 
 function VerificationsUpload() {
+  const { id } = useParams(); // Get the instructor ID from the URL
   const [inputs, setInputs] = useState({
     cv: null,
     education: '',
@@ -21,10 +22,19 @@ function VerificationsUpload() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(inputs);
-    // verification logic will need it later
+    const formData = new FormData();
+    formData.append('cv', inputs.cv);
+    formData.append('education', inputs.education);
+    formData.append('proof', inputs.proof);
+
+    try {
+      await completeInstructorRegistration(id, formData);
+      alert('Verification complete');
+    } catch (error) {
+      console.error('Error completing registration', error);
+    }
   };
 
   const inputStyle = {

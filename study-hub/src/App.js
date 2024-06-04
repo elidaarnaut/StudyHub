@@ -37,7 +37,7 @@ function App() {
       <Route path="/selectProfile" element={<SelectProfile />} />
       <Route path="/signup1" element={<SignUp1 />} />
       <Route path="/signup2" element={<SignUp2/>} />
-      <Route path="/verifications" element={<VerificationsUpload/>} />
+      <Route path="/verifications/:id" element={<VerificationsUpload/>} />
       <Route path="/gradepage" element={<GradePage />} />
       <Route path="/unitspage" element={<UnitsPage />} />
       

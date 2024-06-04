@@ -41,3 +41,27 @@ export const sendMessageToChatbot = async (message) => {
         throw error.response ? error.response.data : new Error('Error communicating with chatbot');
     }
 };
+// api servica calls for instructors 
+
+export const registerInstructorStep1 = async (instructorData) => {
+    try {
+        const response = await axios.post(`${API_BASE_URL}/instructors/register-step1`, instructorData);
+        return response.data;
+    } catch (error) {
+        throw error.response ? error.response.data : new Error('Error registering instructor');
+    }
+};
+
+// Complete instructor registration (Step 2)
+export const completeInstructorRegistration = async (id, formData) => {
+    try {
+        const response = await axios.post(`${API_BASE_URL}/instructors/register-step2/${id}`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response ? error.response.data : new Error('Error completing registration');
+    }
+};
