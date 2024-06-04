@@ -176,7 +176,7 @@
 .topMenu2div{
   width: 100vw;
   height: 60px;
-  background-color: #D03D18;
+  background-color: #d93030;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,6 +192,7 @@
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 700;
   margin: 5px;
+  font-size: 24px;
    
 }
 
@@ -981,11 +982,13 @@ label {
 
 /* INSTRUCTORS PAGE */
 
-.instructorsSectionDash {
+.instructorsSectionDash, .coursesSection {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+
+
 
 .instructorsTitle {
   text-align: left;
@@ -999,7 +1002,7 @@ label {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 35px;
 }
 
 /* INSTRUCTOR CARD */
@@ -1009,6 +1012,7 @@ label {
   height: 200px;
   background-color: #EEEEEE;
   border-radius: 20px;
+  position: relative;
   padding: 15px;
   display: flex;
   flex-direction: row;
@@ -1041,6 +1045,135 @@ label {
   text-overflow: ellipsis; 
   /* does not look like i want it to  */
 }
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #d93030;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  
+ }
+
+ .instructorCard:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ 
+ /* COURSE CARD PAGE */
+
+ .coursesCardLayout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+
+ }
+
+ /* COURSE CARD */
+ 
+ .courseCard {
+  width: 48%;
+  height: 400px;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+ }
+
+ .courseCard:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ .CCPriceBox {
+  background-color: #023047;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  margin: 0px;
+  border-radius: 15px;
+ }
+
+ .CCPriceBox p {
+  margin: 0px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+ }
+
+ .courseInstructorImg {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: #003875;
+  border-radius: 15px;
+ }
+
+ .courseInstructorImg img {
+  width: 100%;
+ }
+
+ .instructorNameCC {
+  font-weight: 700;
+  font-size: 23px;
+ }
+
+ .CCPictureSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+ .CCText {
+  width: calc(100% - 250px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+
+ }
+
+ .CCBoldedText {
+  font-weight: 600;
+ }
+
+ .courseName {
+  font-weight: 700;
+  font-size: 30px;
+  color: #c72b2b;
+ }
+
+ .CCInstructorDescription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Adjust as needed */
+  line-height: 1.4; /* Adjust line height as needed */
+  height: calc(1.4em * 3); /* Adjust based on line-height and line-clamp */
+ }
+
+ .noLink, .noLinkSH {
+  text-decoration: none;
+ }
 
 
 
@@ -1105,6 +1238,10 @@ label {
     text-decoration: none;
    }
 
+   .SHMenu {
+    display: none;
+   }
+
    /* SIDEBAR */
    .sidebarContents {
     display: flex;
@@ -1120,6 +1257,7 @@ label {
 
    .next2SideMenuDiv {
     align-items: center;
+    margin-bottom: 30px;
    }
 
    .badgesSectionDash, .mySubjectsDash {
@@ -1175,7 +1313,7 @@ label {
    /* INSTRUCTOR CARD */
 
    .instructorCard {
-    width: 100%;
+    width: 90%;
     height: 500px;
     flex-direction: column;
     
@@ -1183,7 +1321,6 @@ label {
    }
 
    
-
    .instructorImgContainer {
     width: 100%;
     height: fit-content;
@@ -1192,7 +1329,29 @@ label {
    .instructorText{
     width: 100%;
     height: 25%;
-    overflow: scroll;
+    overflow: hidden;
+   }
+
+   .instructorsSectionDash {
+    align-items: center;
+   }
+
+   .instructorCardLayout {
+    display: flex;
+    justify-content: center;
+   }
+
+   /* COURSE CARD  */
+
+   .courseCard {
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 20px;
+   }
+
+   .CCText {
+    width: 100%;
    }
 
 }

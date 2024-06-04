@@ -21,6 +21,7 @@ function Sidebar2({ toggleNav }) {  // Receive toggleNav as a prop
         
         <button className="button">Upload Material</button>
         <h2 className="sideMenuTitle">EXPLORE</h2>
+        <Link to="/dashboardAdministrator" className='noLink'><p>Home</p></Link>
         <Link><p>Instructors</p></Link>
         <Link><p>Courses</p></Link>
         <Link to="/subjects" className="link"><p>Subjects</p></Link>

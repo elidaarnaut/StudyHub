@@ -18,6 +18,7 @@ function Sidebar({ toggleNav }) {  // Receive toggleNav as a prop
         <a href="javascript:void(0)" className="closebtn" onClick={handleToggleNav}>×</a>
         
         <h2 className="sideMenuTitle">EXPLORE</h2>
+        <Link to="/dashboardStudent" className='noLink'><p>Home</p></Link>
         <Link to="/instructors" className='noLink'><p>Instructors</p></Link>
         <Link to="/courses" className='noLink'><p>Courses</p></Link>
         <Link to="/" className='noLink'><p>AI Chat</p></Link>

@@ -16,6 +16,9 @@ function InstructorsPage(){
                             <InstructorCard></InstructorCard>
                             <InstructorCard></InstructorCard>
                             <InstructorCard></InstructorCard>
+                            <InstructorCard></InstructorCard>
+                            <InstructorCard></InstructorCard>
+                            <InstructorCard></InstructorCard>
 
 
 
