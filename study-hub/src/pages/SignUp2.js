@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import SignUpImage from '../assets/3DSignUp.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// This signup2 page is step 1 for instructors to register to the page.
+import { registerInstructorStep1 } from '../services/apiService'; 
 
 function SignUp2() {
   const [inputs, setInputs] = useState({
@@ -20,11 +19,14 @@ function SignUp2() {
     setInputs(prevState => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(inputs);
-    // sign up logic will need it later
-    navigate('/verification');
+    try {
+      const response = await registerInstructorStep1(inputs);
+      navigate(`/verifications/${response.instructorId}`);
+    } catch (error) {
+      console.error('Error registering instructor', error);
+    }
   };
 
   const inputStyle = {

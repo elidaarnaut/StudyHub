@@ -3,12 +3,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
+const instructorRoutes = require('./routes/instructorRoutes');
+// const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
-app.use(cors());
-app.use(express.json()); 
 
-// Connecting to MongoDB ! <3 
+// Middleware
+app.use(cors());
+app.use(express.json()); // Ensure this is before route definitions
+
+// Connecting to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
     bufferCommands: false,
     serverSelectionTimeoutMS: 5000,
@@ -21,8 +25,14 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('Error connecting to MongoDB:', err);
 });
 
-//  student routes
+// Student routes
 app.use('/students', studentRoutes);
+
+// Instructor routes
+app.use('/instructors', instructorRoutes);
+
+// Chatbot routes
+// app.use('/chatbot', chatbotRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

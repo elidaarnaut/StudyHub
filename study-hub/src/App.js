@@ -24,6 +24,8 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/chatbot" element={<Chatbot />} />
       <Route path="/dashboardStudent" element={<DashboardStudent />} />
       <Route path="/dashboardInstructor" element={<DashboardInstructor />} />
       <Route path="/dashboardAdministrator" element={<DashboardAdministrator />} />
@@ -35,7 +37,7 @@ function App() {
       <Route path="/selectProfile" element={<SelectProfile />} />
       <Route path="/signup1" element={<SignUp1 />} />
       <Route path="/signup2" element={<SignUp2/>} />
-      <Route path="/verifications" element={<VerificationsUpload/>} />
+      <Route path="/verifications/:id" element={<VerificationsUpload/>} />
       <Route path="/gradepage" element={<GradePage />} />
       <Route path="/unitspage" element={<UnitsPage />} />
       <Route path="/instructors" element={<InstructorsPage />} />
