@@ -1,15 +1,14 @@
-//  TOP MENU FOR STUDENTS
+//  TOP MENU FOR INSTRUCTOR
 
 import React from "react";
 import Search1 from "./Search1";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar3";
 import menuPic from "../assets/menu.svg";
-import { getStudentDashboard } from "../services/apiService";
 import { Link } from "react-router-dom";
 
 import "../App.css"
 
-function TopMenu2(){
+function TopMenu4(){
 
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -20,7 +19,7 @@ function TopMenu2(){
     <div className="topMenu2div">
       <Sidebar toggleNav={toggleNav}  />
             
-      <Link to="/dashboardStudent" className="noLinkSH"><p className="SHMenu">StudyHub</p></Link>
+      <Link to="/dashboardInstructor" className="noLinkSH"><p className="SHMenu">StudyHub</p></Link>
       <div className="rightItem">
         <Search1></Search1>
       </div>
@@ -28,4 +27,4 @@ function TopMenu2(){
   );
 }
 
-export default TopMenu2;
+export default TopMenu4;

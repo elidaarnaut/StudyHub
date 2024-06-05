@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Container, Row, Col } from 'react-bootstrap';
-import StudentImage from '../assets/student.jpg';
-import InstructorImage from '../assets/instructor.jpg';
+import StudentImage from '../assets/Student.svg';
+import InstructorImage from '../assets/Instructor.svg';
 import WebFont from 'webfontloader';
 
 WebFont.load({
@@ -58,7 +59,7 @@ function SelectProfile() {
 
     return (
         <Container style={containerStyle}>
-            <h2 className="text-center mb-4" style={titleStyle}>Please choose account type!</h2>
+            <h2 className="text-center mb-4" style={titleStyle}>Please choose the account type!</h2>
             <Row className="d-flex justify-content-center">
                 <Col md={6} lg={4} className="mb-4 d-flex align-items-stretch" style={colStyle} onClick={handleStudentClick}>
                     <Card className="text-center" style={cardStyle}>

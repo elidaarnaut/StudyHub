@@ -1,12 +1,10 @@
 import React from "react";
-import TopMenu2 from "../components/TopMenu2";
-import SideMenu2 from "../components/SideMenu2";
+import TopMenu3 from "../components/TopMenu3";
 
 function DashboardAdministrator(){
     return(
-        <div>
-            <TopMenu2></TopMenu2>
-            <SideMenu2></SideMenu2>
+        <div className="sDashboardMain">
+            <TopMenu3></TopMenu3>
             <div className="next2SideMenuDiv">
                 <div className="pendingInstSection">
                     <h1>Pending Instructor Approval</h1>

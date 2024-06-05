@@ -10,6 +10,7 @@ function Search1(){
                     type="text"
                     placeholder="Search"
                     className="searchInput"
+                    id="searchInput"
                     aria-label="Search"
                     // ^^ for people with disabilities
                 />
