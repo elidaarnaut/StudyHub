@@ -18,6 +18,8 @@ import UnitsPage from './pages/UnitsPage';
 import InstructorsPage from './pages/InstructorsPage';
 import CoursesPage from './pages/CoursesPage';
 import BadgesPage from './pages/BadgesPage';
+import LoginPage from './pages/LoginPage';
+
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Homepage1 />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/chatbot" element={<Chatbot />} />
+      {/* <Route path="/chatbot" element={<Chatbot />} /> */}
       <Route path="/dashboardStudent" element={<DashboardStudent />} />
       <Route path="/dashboardInstructor" element={<DashboardInstructor />} />
       <Route path="/dashboardAdministrator" element={<DashboardAdministrator />} />

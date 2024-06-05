@@ -11,7 +11,7 @@ function TopMenu1(){
         <div className="topMenu1div">
             {/* <Search1></Search1> */}
             
-            <Link to="/dashboardInstructor" className="noLink"><button className="button">Log in</button></Link>
+            <Link to="/login" className="noLink"><button className="button">Log in</button></Link>
             <Link to="/selectProfile" className="noLink"><button className="button">Sign up</button></Link>
             
             

@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const fs = require('fs');
 
-// Get instructor dashboard
+// Get instructor dashboard since thts where it leads
 exports.getDashboard = (req, res) => {
     res.send('Welcome to the Instructor Dashboard');
 };
@@ -67,8 +67,8 @@ async function sendCVEmail(fromEmail, cvPath) {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'your_email@gmail.com',
-            pass: 'your_password',
+            user: 'exampledalila@gmail.com', //this also needs updates !! 
+            pass: 'lila1',
         },
     });
 
