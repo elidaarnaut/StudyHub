@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
+* {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
 /* Styles the entire scrollbar */
 ::-webkit-scrollbar {
+  display: none;
   width: 12px; /* width of the entire scrollbar */
 }
 
@@ -14,9 +19,9 @@
 
 /* Styles the thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-  /* background: #888;  */
+  background: #888;  
   /* color of the thumb */
-  background: linear-gradient(#D03D18,#023047,#D03D18);
+  /* background: linear-gradient(#D03D18,#023047,#D03D18); */
 
 }
 
@@ -28,15 +33,17 @@
 
  /* SEARCH COMPONENT */
 
- .searchInput{
+ .searchInput {
   height: 30px;
-  border-radius: 50px 0 0 50px;
+  border-radius: 50px 0 0 50px !important;
   background-color: rgba(255, 255, 255, 0.7);
   border: none;
   padding: 0%;
   padding-left: 5px;
 
 }
+
+
 
 .searchImg {
   width: 20px;
@@ -65,13 +72,13 @@
 
  /* HOMEPAGE1 */
 .topMenu1div{
-  width: 90%;
+  width: 100vw;
   height: 60px;
   background-color: #2D4263;
   padding-left: 5%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
   padding-right: 5%;
   /* position: absolute; */
   top: 0;
@@ -80,7 +87,10 @@
 .hp1Body {
   background: rgb(240,67,24);
   background: linear-gradient(135deg, rgba(240,67,24,1) 0%, rgba(241,150,127,1) 100%);
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
+  width: 100vw;
+
 }
 
 .mainPartHP{
@@ -88,15 +98,19 @@
   flex-direction: row;
   height: calc(100vh - 60px);
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .mainText{
-  width: 30%;
-  height: 65vh;
+  width: 40%;
+  min-height: 70vh;
+  overflow: auto;
   background-color: rgba(245, 245, 245, 0.7);
   border-radius: 30px;
   padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: 5%;
@@ -143,7 +157,8 @@
 .button{
   background-color: #D03D18;
   height: 30px;
-  width: fit-content;
+  min-width: 90px;
+  overflow: auto;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
@@ -161,7 +176,7 @@
 .topMenu2div{
   width: 100vw;
   height: 60px;
-  background-color: #D03D18;
+  background-color: #d93030;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,6 +192,7 @@
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 700;
   margin: 5px;
+  font-size: 24px;
    
 }
 
@@ -205,6 +221,7 @@
   height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
+  width: 100vw;
 
 }
 
@@ -243,8 +260,13 @@
   font-weight: 600;
 }
 
-.sidebar hr {
+.sidebarHr{
   width: 90%;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  margin: 10px auto;
+  
 }
 
 .sideMenuTitle {
@@ -252,19 +274,28 @@
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 700;
+  padding: 10px 15px;
 
 }
 
  /* DASHBOARD STUDENT  */
-.next2SideMenuDiv {
+.next2SideMenuDiv, .next2SideMenuDivProfile {
   width: 90%;
   display: flex;
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-top: 15px;
   /* left: 20%; */
   top: 60px;
 }
+
+.next2SideMenuDivProfile {
+  margin: 0px;
+  width: 100vw;
+  align-items: center;
+}
+
 
 .badgesSectionDash {
   width: 90%;
@@ -323,14 +354,52 @@
 }
 
 .subjectItemDash {
-  width: 45%;
-  height: 100px;
+  width: 48%;
+  min-height: 220px;
   background-color: #EEEEEE;
   border-radius: 20px;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  text-align: left;
 
+}
+
+.subjectCover {
+  width: 95%;
+  /* background-color: #003875; */
+  height: 100px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: auto;
+}
+
+.subjectTextCard {
+  width: 95%;
+  margin: auto;
+  max-height: fit-content;
+  overflow: hidden;
+  color: #023047;
+}
+
+
+
+.subjectTitle {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #D03D18;
+}
+
+.subjectCover img {
+  width: 100%;
 }
 
 .subjectsListedDash {
@@ -338,8 +407,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 20px;
-
 }
+
+
 
  /* SIDE MENU 2  */
 
@@ -500,6 +570,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 20px;
+  position: relative;
   
 }
 
@@ -535,6 +606,11 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.seeMoreLink, .seeMoreLink:any-link  {
+  color: #023047;
+  text-decoration: none;
 }
 
 .profileSides2 p{
@@ -829,7 +905,7 @@ label {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 20 !important;
   top: 0;
   left: 0;
   background-color: #111;
@@ -859,6 +935,7 @@ label {
   font-size: 36px;
   margin-left: 50px;
   color: #ccc;
+  padding: 0px;
 }
 
 .sidebar .closebtn:hover {
@@ -886,7 +963,7 @@ label {
 }
 
 .openbtn:hover {
-  background-color: #2D4263;
+  background-color: #b82f0d;
   ;
 }
 
@@ -897,7 +974,205 @@ label {
   padding-left: 30px;
 }
 
+#menuCreateCourse {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* padding: 10px 10px; */
+}
 
+/* INSTRUCTORS PAGE */
+
+.instructorsSectionDash, .coursesSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.instructorsTitle {
+  text-align: left;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #023047;
+  padding-top: 10px;
+}
+
+.instructorCardLayout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+/* INSTRUCTOR CARD */
+
+.instructorCard {
+  width: 48%;
+  height: 200px;
+  background-color: #EEEEEE;
+  border-radius: 20px;
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.instructorImgContainer {
+  width: 170px;
+  height: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.instructorImgContainer img{
+  width: 100%;
+  
+}
+
+.instructorName {
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.instructorText {
+  width: calc(100% - 30px - 15px - 170px);
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  /* does not look like i want it to  */
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: #d93030;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  
+ }
+
+ .instructorCard:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ 
+ /* COURSE CARD PAGE */
+
+ .coursesCardLayout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+
+ }
+
+ /* COURSE CARD */
+ 
+ .courseCard {
+  width: 48%;
+  height: 400px;
+  background-color: #eee;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+ }
+
+ .courseCard:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ .CCPriceBox {
+  background-color: #023047;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  margin: 0px;
+  border-radius: 15px;
+ }
+
+ .CCPriceBox p {
+  margin: 0px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+ }
+
+ .courseInstructorImg {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: #003875;
+  border-radius: 15px;
+ }
+
+ .courseInstructorImg img {
+  width: 100%;
+ }
+
+ .instructorNameCC {
+  font-weight: 700;
+  font-size: 23px;
+ }
+
+ .CCPictureSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+ .CCText {
+  width: calc(100% - 250px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+ }
+
+ .CCBoldedText {
+  font-weight: 600;
+ }
+
+ .courseName {
+  font-weight: 700;
+  font-size: 30px;
+  color: #c72b2b;
+ }
+
+ .CCInstructorDescription {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Adjust as needed */
+  line-height: 1.4; /* Adjust line height as needed */
+  height: calc(1.4em * 3); /* Adjust based on line-height and line-clamp */
+ }
+
+ .noLink, .noLinkSH {
+  text-decoration: none;
+ }
 
 
 
@@ -905,4 +1180,177 @@ label {
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+
+@media screen and (max-width: 768px) {
+
+   /* HOMEPAGE1 RESPONSIVENESS */
+   .mainPartHP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+   }
+
+   .mainText {
+    width: 90%;
+    min-height: 65vh;
+    margin: 0px;
+
+   }
+
+   .mainText p{
+    font-size: 20px;
+   }
+
+   .mainText h1 {
+    font-size: 45px;
+    padding-bottom: 10px;
+   }
+
+   .mainPhoto {
+    width: 90%;
+    display: none;
+   }
+
+   .mainPhoto img {
+    width: 100%;
+    display: none;
+   }
+
+   /* TOP MENU 1 FOR HOMEPAGE1 */
+   .topMenu1div {
+    height: 70px;
+   }
+
+   .button {
+    display: flex;
+    font-size: 20px;
+    padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+ 
+   }
+
+   .noLink {
+    text-decoration: none;
+   }
+
+   .SHMenu {
+    display: none;
+   }
+
+   /* SIDEBAR */
+   .sidebarContents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .subjectsListedDash {
+    flex-direction: column;
+   }
+
+   /* STUDENT DASHBOARD */
+
+   .next2SideMenuDiv {
+    align-items: center;
+    margin-bottom: 30px;
+   }
+
+   .badgesSectionDash, .mySubjectsDash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   }
+
+   .dashHr {
+    width: 90%;
+    height: 1px;
+    background-color: #111;
+   }
+
+   .subjectsListedDash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .subjectItemDash {
+    width: 95%;
+   }
+
+   .ProfilePicDiv {
+    display: flex;
+    align-content: center;
+   }
+  
+   .profilePic {
+    margin: auto;
+    left: 0px;
+   }
+
+   .profileContents {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+   }
+
+   .profileSides1 {
+    width: 90%;
+   }
+
+   .profileSides2 {
+    width: 90%;
+   }
+
+   /* INSTRUCTOR CARD */
+
+   .instructorCard {
+    width: 90%;
+    height: 500px;
+    flex-direction: column;
+    
+    
+   }
+
+   
+   .instructorImgContainer {
+    width: 100%;
+    height: fit-content;
+   }
+
+   .instructorText{
+    width: 100%;
+    height: 25%;
+    overflow: hidden;
+   }
+
+   .instructorsSectionDash {
+    align-items: center;
+   }
+
+   .instructorCardLayout {
+    display: flex;
+    justify-content: center;
+   }
+
+   /* COURSE CARD  */
+
+   .courseCard {
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 20px;
+   }
+
+   .CCText {
+    width: 100%;
+   }
+
 }

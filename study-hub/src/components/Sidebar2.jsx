@@ -1,10 +1,12 @@
+//  SIDEBAR FOR ADMIN
+
 import React, { useState } from 'react';
 import menuPic from "../assets/menu.svg";
 import { Link } from "react-router-dom";
 
 import '../App.css';
 
-function Sidebar({ toggleNav }) {  // Receive toggleNav as a prop
+function Sidebar2({ toggleNav }) {  // Receive toggleNav as a prop
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggleNav = () => {
@@ -17,12 +19,11 @@ function Sidebar({ toggleNav }) {  // Receive toggleNav as a prop
       <div id="mySidebar" className="sidebar" style={{ width: isOpen ? '250px' : '0' }}>
         <a href="javascript:void(0)" className="closebtn" onClick={handleToggleNav}>×</a>
         
+        <button className="button">Upload Material</button>
         <h2 className="sideMenuTitle">EXPLORE</h2>
-        <Link to="/dashboardStudent" className='noLink'><p>Home</p></Link>
-        <Link to="/instructors" className='noLink'><p>Instructors</p></Link>
-        <Link to="/courses" className='noLink'><p>Courses</p></Link>
-        <Link to="/" className='noLink'><p>AI Chat</p></Link>
-        <Link to="/" className='noLink'><p>Virtal Lab</p></Link>
+        <Link to="/dashboardAdministrator" className='noLink'><p>Home</p></Link>
+        <Link><p>Instructors</p></Link>
+        <Link><p>Courses</p></Link>
         <Link to="/subjects" className="link"><p>Subjects</p></Link>
         <hr className='sidebarHr'/>
         <h2 className="sideMenuTitle">MY ACCOUNT</h2>
@@ -41,4 +42,4 @@ function Sidebar({ toggleNav }) {  // Receive toggleNav as a prop
   );
 }
 
-export default Sidebar;
+export default Sidebar2;
