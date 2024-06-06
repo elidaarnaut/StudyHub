@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
 const instructorRoutes = require('./routes/instructorRoutes');
-// const chatbotRoutes = require('./routes/chatbot');
+const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
 
@@ -32,7 +32,7 @@ app.use('/students', studentRoutes);
 app.use('/instructors', instructorRoutes);
 
 // Chatbot routes
-// app.use('/chatbot', chatbotRoutes);
+app.use('/chatbot', chatbotRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

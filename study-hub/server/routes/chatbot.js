@@ -1,27 +1,25 @@
 const express = require('express');
-const { Configuration, OpenAIApi } = require('openai');
+const OpenAI = require('openai');
 const router = express.Router();
 require('dotenv').config();
 
-const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 router.post('/', async (req, res) => {
     const { message } = req.body;
     console.log('Received message:', message);
 
     try {
-        const response = await openai.createChatCompletion({
+        const response = await openai.chat.completions.create({
             model: 'gpt-3.5-turbo',
             messages: [
+                { role: 'system', content: 'You are a helpful assistant.' },
                 { role: 'user', content: message }
             ],
         });
 
-        console.log('OpenAI response:', response.data);
-        res.json({ reply: response.data.choices[0].message.content });
+        console.log('OpenAI response:', response.choices[0].message);
+        res.json({ reply: response.choices[0].message.content });
     } catch (error) {
         console.error('Error communicating with OpenAI API:', error.response ? error.response.data : error.message);
         if (error.response) {
