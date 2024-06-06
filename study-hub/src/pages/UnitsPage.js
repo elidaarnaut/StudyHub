@@ -66,7 +66,7 @@ function UnitButton() {
   );
 }
 
-//Component
+// Component
 function UnitsPage() {
   const pageStyle = {
     fontFamily: 'Arial, sans-serif',
@@ -74,7 +74,7 @@ function UnitsPage() {
   };
 
   const titleRowStyle = {
-    marginTop: '20px',
+    marginTop: '26px',
     marginBottom: '20px',
   };
 
@@ -83,7 +83,9 @@ function UnitsPage() {
     fontSize: '24px',
     textAlign: 'left',
     width: '100%',
-    marginLeft: '20px',
+    marginLeft: '9%',
+    marginTop: '6%',
+   
   };
 
   const colStyle = {
@@ -93,8 +95,9 @@ function UnitsPage() {
   };
 
   return (
+    
     <Container fluid style={pageStyle}>
-      <TopMenu2 />
+      <TopMenu2/>
       <Row style={titleRowStyle}>
         <Col>
           <h2 style={titleStyle}>1st Grade &gt; Units</h2>
@@ -106,16 +109,8 @@ function UnitsPage() {
           <UnitButton />
           <UnitButton />
           <UnitButton />
-          <UnitButton />
-          <UnitButton />
-          <UnitButton />
-          <UnitButton />
         </Col>
         <Col xs={12} md={6} style={colStyle}>
-          <UnitButton />
-          <UnitButton />
-          <UnitButton />
-          <UnitButton />
           <UnitButton />
           <UnitButton />
           <UnitButton />
