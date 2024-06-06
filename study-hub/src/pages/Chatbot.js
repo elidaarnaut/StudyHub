@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { sendMessageToChatbot } from '../services/apiService';
 import TopMenu2 from "../components/TopMenu2";
-import abstract from "../assets/abstract.webp";  // Import the image
+import abstract from "../assets/abstract.webp";  // Import the background image
+import aiAvatar from "../assets/aiavatar.webp";  // Import the AI avatar image
 
 const Chatbot = () => {
     const [message, setMessage] = useState('');
@@ -40,18 +41,16 @@ const Chatbot = () => {
         width: '240px',
         padding: '10px',
         backgroundColor: '#202123',
-        backgroundImage: `url(${abstract})`,  // Set the background image
-        backgroundSize: 'cover',  // Ensure the image covers the entire side menu
-        backgroundPosition: 'center',  // Center the image
-        color: 'white'  // Ensure the text is readable on the image
+        backgroundImage: `url(${abstract})`,  
+        backgroundSize: 'cover',  
+        backgroundPosition: 'center', 
+        color: 'white'  
     };
-
-   
 
     const chatboxStyle = {
         flex: 1,
         border: '1px solid white',
-        backgroundColor: '#D03D18',
+        backgroundColor: '#FFFFFF',
         display: 'flex',
         flexDirection: 'column',
         position: 'relative'
@@ -73,9 +72,9 @@ const Chatbot = () => {
         display: 'flex',
         alignItems: 'center',
         width: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: 'rgba(217, 48, 48, 0.9)',
         padding: '12px',
-        borderRadius: '8px'
+        borderRadius: '30px'
     };
 
     const avatarStyle = (color) => ({
@@ -93,8 +92,8 @@ const Chatbot = () => {
     const messageStyle = {
         marginLeft: '16px',
         padding: '12px',
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
-        borderRadius: '5px',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        borderRadius: '30px',
         flex: 1,
         textAlign: 'left',
         color: 'white'
@@ -103,6 +102,7 @@ const Chatbot = () => {
     const chatInputHolderStyle = {
         padding: '24px',
         position: 'absolute',
+        borderRadius: '30px',
         bottom: 0,
         left: 0,
         right: 0,
@@ -111,23 +111,24 @@ const Chatbot = () => {
     };
 
     const chatInputStyle = {
-        backgroundColor: '#40414f',
+        backgroundColor: 'rgba(217, 48, 48, 0.9)',
         padding: '12px',
-        color: 'white',
+        color: '#FFFFFF',
         fontSize: '1.25em',
         width: '100%',
-        borderRadius: '5px',
+        borderRadius: '30px',
         border: 'none',
         outline: 'none',
         resize: 'none',
-        marginRight: '10px'
+        marginRight: '10px',
+        color: 'white'  // Set text color to white
     };
 
     const sendButtonStyle = {
         backgroundColor: '#EF5350',
         border: 'none',
         borderRadius: '50%',
-        padding: '10px',
+        padding: '14px',
         cursor: 'pointer',
         display: 'flex',
         alignItems: 'center',
@@ -145,16 +146,18 @@ const Chatbot = () => {
             <TopMenu2 />
             <div style={containerStyle}>
                 <aside style={sideMenuStyle}>
-                    
+                    {/* Side menu content */}
                 </aside>
                 <section style={chatboxStyle}>
                     <div style={chatLogStyle}>
                         {chatHistory.map((chat, index) => (
                             <div key={index} style={chatMessageStyle}>
                                 <div style={chatMessageCenterStyle}>
-                                    <div style={avatarStyle(chat.sender === 'You' ? 'red' : 'blue')}>
-                                        {chat.sender[0]}
-                                    </div>
+                                    {chat.sender === 'AI Chatbot' ? (
+                                        <img src={aiAvatar} alt="AI Avatar" style={{ borderRadius: '50%', width: '40px', height: '40px' }} />
+                                    ) : (
+                                        <div style={avatarStyle('red')}>{chat.sender[0]}</div>
+                                    )}
                                     <div style={messageStyle}>{chat.text}</div>
                                 </div>
                             </div>
@@ -165,7 +168,7 @@ const Chatbot = () => {
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            placeholder="Ask me anything..."
+                            
                             style={chatInputStyle}
                         />
                         <button onClick={sendMessage} style={sendButtonStyle}>
