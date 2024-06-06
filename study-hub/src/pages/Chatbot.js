@@ -72,7 +72,7 @@ const Chatbot = () => {
         display: 'flex',
         alignItems: 'center',
         width: '100%',
-        backgroundColor: 'rgba(217, 48, 48, 0.9)',
+        backgroundColor: 'rgba(156, 184, 193)',
         padding: '12px',
         borderRadius: '30px'
     };
@@ -111,9 +111,9 @@ const Chatbot = () => {
     };
 
     const chatInputStyle = {
-        backgroundColor: 'rgba(217, 48, 48, 0.9)',
+        backgroundColor: 'rgba(156, 184, 193)',
         padding: '12px',
-        color: '#FFFFFF',
+        color: 'white',
         fontSize: '1.25em',
         width: '100%',
         borderRadius: '30px',
@@ -125,7 +125,7 @@ const Chatbot = () => {
     };
 
     const sendButtonStyle = {
-        backgroundColor: '#EF5350',
+         backgroundColor: 'rgba(156, 184, 193)',
         border: 'none',
         borderRadius: '50%',
         padding: '14px',
