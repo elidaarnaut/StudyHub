@@ -1174,6 +1174,16 @@ label {
   text-decoration: none;
  }
 
+ /* BADGES PAGE */
+ .badgesLayout {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+
+ }
+
 
 
 /* Responsive adjustment */
