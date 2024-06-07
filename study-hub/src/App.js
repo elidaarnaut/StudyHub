@@ -21,6 +21,9 @@ import BadgesPage from './pages/BadgesPage';
 import LoginPage from './pages/LoginPage';
 import Chatbot from './pages/Chatbot';
 import TestsPage from './pages/TestsPage';
+import MyCoursesInstructorPage from './pages/MyCoursesInstructorPage';
+import AdminInstructorPage from './pages/AdminInstructorsPage';
+import AdminCoursesPage from './pages/AdminCoursesPage';
 
 
 function App() {
@@ -48,11 +51,9 @@ function App() {
       <Route path="/instructors" element={<InstructorsPage />} />
       <Route path="/courses" element={<CoursesPage />} />
       <Route path="/badgesPage" element={<BadgesPage />} />
-
-
-
-      
-
+      <Route path="/myCourses" element={<MyCoursesInstructorPage />} />
+      <Route path="/adminInstructorsPage" element={<AdminInstructorPage />} />
+      <Route path="/adminCoursesPage" element={<AdminCoursesPage />} />
 
 
 

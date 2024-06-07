@@ -23,7 +23,7 @@ function Sidebar3({ toggleNav }) {  // Receive toggleNav as a prop
           <button className="button" id='menuCreateCourse'>Create Course</button>
           <h2 className="sideMenuTitle">EXPLORE</h2>
           <Link to="/dashboardInstructor" className='noLink'><p>Home</p></Link>
-          <Link><p>My Courses</p></Link>
+          <Link to="/myCourses"  className='noLink'><p>My Courses</p></Link>
           <hr className='sidebarHr' />
           <h2 className="sideMenuTitle">MY ACCOUNT</h2>
           <Link to="/profile" className="link"><p>Profile</p></Link>
