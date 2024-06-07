@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopMenu2 from '../components/TopMenu2';
 
@@ -42,7 +42,7 @@ function GradePage() {
   const schoolTitleStyle = {
     color: '#000000',
     marginBottom: '20px',
-    marginTop:'50px',
+    marginTop: '50px',
     textAlign: 'center',
     fontWeight: 'bold',
     textTransform: 'uppercase',
@@ -52,23 +52,24 @@ function GradePage() {
     backgroundColor: '#2D4263',
     color: 'white',
     padding: '20px',
-    borderRadius: '10px',
+    borderRadius: '30px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     width: '80%',
     textAlign: 'center',
   };
 
-  //const hrStyle = { i do not needd this for now
-    //width: '2px',
-    //backgroundColor: '#2D4263',
-    //margin: '0 20px',
-    ////height: 'auto',
-    //border: 'none',
-  //};
+  const buttonStyle = {
+    backgroundColor: '#4F6E9F',
+    borderColor: '#4F6E9F',
+    color: 'white',
+    width: '80%',
+    margin: '3px 0',borderRadius: '30px',
+  };
 
-  const cardTextStyle = {
-    margin: '10px 0',
-    fontWeight: 'bold',
+  const verticalLineStyle = {
+    borderLeft: '3px solid #2D4263',
+    height: '100%',
+    alignSelf: 'stretch', // Ensure the vertical line stretches to fill the height of the row
   };
 
   return (
@@ -85,29 +86,29 @@ function GradePage() {
           <h3 style={schoolTitleStyle}>Primary School</h3>
           <Card style={gradeBoxStyle}>
             <Card.Body>
-              <Card.Text style={cardTextStyle}>1st Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>2nd Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>3rd Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>4th Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>5th Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>6th Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>7th Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>8th Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>9th Grade</Card.Text>
+              <Button style={buttonStyle}>1st Grade</Button>
+              <Button style={buttonStyle}>2nd Grade</Button>
+              <Button style={buttonStyle}>3rd Grade</Button>
+              <Button style={buttonStyle}>4th Grade</Button>
+              <Button style={buttonStyle}>5th Grade</Button>
+              <Button style={buttonStyle}>6th Grade</Button>
+              <Button style={buttonStyle}>7th Grade</Button>
+              <Button style={buttonStyle}>8th Grade</Button>
+              <Button style={buttonStyle}>9th Grade</Button>
             </Card.Body>
           </Card>
         </Col>
-        <Col xs="auto" className="d-flex align-items-start">
-        <br />
+        <Col xs="auto" className="d-flex align-items-center">
+          <div style={verticalLineStyle}></div>
         </Col>
         <Col xs={12} md={5} className="d-flex flex-column align-items-center">
           <h3 style={schoolTitleStyle}>High School</h3>
           <Card style={gradeBoxStyle}>
             <Card.Body>
-              <Card.Text style={cardTextStyle}>1st Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>2nd Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>3rd Grade</Card.Text>
-              <Card.Text style={cardTextStyle}>4th Grade</Card.Text>
+              <Button style={buttonStyle}>1st Grade</Button>
+              <Button style={buttonStyle}>2nd Grade</Button>
+              <Button style={buttonStyle}>3rd Grade</Button>
+              <Button style={buttonStyle}>4th Grade</Button>
             </Card.Body>
           </Card>
         </Col>

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { sendMessageToChatbot } from '../services/apiService';
 import TopMenu2 from "../components/TopMenu2";
-import abstract from "../assets/abstract.webp";  // Import the background image
-import aiAvatar from "../assets/aiavatar.webp";  // Import the AI avatar image
+import abstract from "../assets/abstract1.webp";  
+import aiAvatar from "../assets/aiavatar.webp";  
 
-const Chatbot = () => {
+const TestsPage = () => {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
-        { sender: 'AI Chatbot', text: 'Hello! Lets learn new languages together ! Ask me ! ' }
+        { sender: 'AI Chatbot', text:'Hello student, welcome to your essay questions section!' },
+        { sender: 'AI Chatbot', text:'Your essay question is to explain why the equator is warmer than the poles. Use facts about the Earths shape and the suns rays to support your answer. Lets see if you answer is correct!' }
     ]);
 
     const sendMessage = async () => {
@@ -72,9 +73,9 @@ const Chatbot = () => {
         display: 'flex',
         alignItems: 'center',
         width: '100%',
-        backgroundColor: 'rgba(156, 184, 193)',
+        backgroundColor: '#023047',
         padding: '12px',
-        borderRadius: '30px'
+        borderRadius: '5px'
     };
 
     const avatarStyle = (color) => ({
@@ -92,8 +93,8 @@ const Chatbot = () => {
     const messageStyle = {
         marginLeft: '16px',
         padding: '12px',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-        borderRadius: '30px',
+        backgroundColor: '#023047',
+        borderRadius: '5px',
         flex: 1,
         textAlign: 'left',
         color: 'white'
@@ -102,7 +103,7 @@ const Chatbot = () => {
     const chatInputHolderStyle = {
         padding: '24px',
         position: 'absolute',
-        borderRadius: '30px',
+        borderRadius: '5px',
         bottom: 0,
         left: 0,
         right: 0,
@@ -111,23 +112,22 @@ const Chatbot = () => {
     };
 
     const chatInputStyle = {
-        backgroundColor: 'rgba(156, 184, 193)',
+        backgroundColor: '#023047',
         padding: '12px',
         color: 'white',
         fontSize: '1.25em',
         width: '100%',
-        borderRadius: '30px',
+        borderRadius: '5px',
         border: 'none',
         outline: 'none',
         resize: 'none',
-        marginRight: '10px',
-        color: 'white'  // Set text color to white
+        marginRight: '10px'
     };
 
     const sendButtonStyle = {
-         backgroundColor: 'rgba(156, 184, 193)',
+        backgroundColor: '#023047',
         border: 'none',
-        borderRadius: '50%',
+        borderRadius: '5%',
         padding: '14px',
         cursor: 'pointer',
         display: 'flex',
@@ -168,7 +168,6 @@ const Chatbot = () => {
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            
                             style={chatInputStyle}
                         />
                         <button onClick={sendMessage} style={sendButtonStyle}>
@@ -183,4 +182,4 @@ const Chatbot = () => {
     );
 };
 
-export default Chatbot;
+export default TestsPage;

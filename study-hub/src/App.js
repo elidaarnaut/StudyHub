@@ -20,6 +20,7 @@ import CoursesPage from './pages/CoursesPage';
 import BadgesPage from './pages/BadgesPage';
 import LoginPage from './pages/LoginPage';
 import Chatbot from './pages/Chatbot';
+import TestsPage from './pages/TestsPage';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/testsPage" element={<TestsPage/>} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/chatbot" element={<Chatbot />} /> 
       <Route path="/dashboardStudent" element={<DashboardStudent />} />
