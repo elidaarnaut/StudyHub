@@ -5,6 +5,7 @@ const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
 const instructorRoutes = require('./routes/instructorRoutes');
 const chatbotRoutes = require('./routes/chatbot');
+const tests = require('./routes/tests');
 
 const app = express();
 
@@ -33,6 +34,8 @@ app.use('/instructors', instructorRoutes);
 
 // Chatbot routes
 app.use('/chatbot', chatbotRoutes);
+
+app.use('/tests', tests);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

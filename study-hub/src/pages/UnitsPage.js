@@ -34,7 +34,7 @@ function UnitButton() {
         }}
         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1B2E4B'}
         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2D4263'}
-        onClick={toggleDropdown} // Toggle dropdown on button click
+        onClick={toggleDropdown} 
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
           Unit
@@ -85,7 +85,13 @@ function UnitsPage() {
     width: '100%',
     marginLeft: '9%',
     marginTop: '6%',
-   
+  };
+
+  const lineStyle = {
+    border: 'none', 
+    borderBottom: '3px solid #2D4263', 
+    marginLeft: '9%',
+    marginRight: '9%',
   };
 
   const colStyle = {
@@ -94,23 +100,31 @@ function UnitsPage() {
     alignItems: 'center',
   };
 
+  const verticalLineStyle = {
+    borderLeft: '3px solid #2D4263',
+    height: '100%',
+  };
+
   return (
-    
     <Container fluid style={pageStyle}>
-      <TopMenu2/>
+      <TopMenu2 />
       <Row style={titleRowStyle}>
         <Col>
           <h2 style={titleStyle}>1st Grade &gt; Units</h2>
+          <hr style={lineStyle} />
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={6} style={colStyle}>
+        <Col xs={12} md={5} style={colStyle}>
           <UnitButton />
           <UnitButton />
           <UnitButton />
           <UnitButton />
         </Col>
-        <Col xs={12} md={6} style={colStyle}>
+        <Col xs={12} md={2} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={verticalLineStyle}></div>
+        </Col>
+        <Col xs={12} md={5} style={colStyle}>
           <UnitButton />
           <UnitButton />
           <UnitButton />
