@@ -632,13 +632,12 @@
 }
 
 .next2SideMenuSettings {
-  width: 80%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
   position: relative;
-  left: 20%;
   top: 60px;
   height: calc(100vh - 60px);
   margin-top: 60px;
