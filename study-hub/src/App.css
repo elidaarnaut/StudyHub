@@ -635,22 +635,28 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: row;
   position: relative;
+  left: 5%;
   top: 60px;
   height: calc(100vh - 60px);
   margin-top: 60px;
+ 
 }
 
 .settingsMenu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   width: 120px;
   color: #023047;
+  position: fixed;
+  right: 5%;
+
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  height: 100vh;
 }
 .sMenuContent {
   display: flex;
@@ -679,6 +685,8 @@
 }
 .accSettings {
   width: 95%;
+  position: relative;
+
   font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
 
