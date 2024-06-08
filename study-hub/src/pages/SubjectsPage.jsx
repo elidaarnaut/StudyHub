@@ -6,22 +6,25 @@ function SubjectsPage(){
     return(
         <div>
             <TopMenu2></TopMenu2>
-            <div className="next2SideMenuDiv">
-                <div className="stemSection">
-                    <h1>STEM </h1>
-                    <hr />
-                    <Slider></Slider>
-                </div>
-                <div className="artsSection">
-                    <h1>ART</h1>
-                    <hr />
-                </div>
-                <div className="socialSciences">
-                    <h1>SOCIAL SCIENCES</h1>
-                    <hr />
-                </div>
+            <div className="sDashboardMain">
+                <div className="next2SideMenuDiv">
+                    <div className="stemSection">
+                        <h1>STEM </h1>
+                        <hr />
+                        <Slider></Slider>
+                    </div>
+                    <div className="artsSection">
+                        <h1>ART</h1>
+                        <hr />
+                    </div>
+                    <div className="socialSciences">
+                        <h1>SOCIAL SCIENCES</h1>
+                        <hr />
+                    </div>
 
+                </div>
             </div>
+           
 
         </div>
     );
