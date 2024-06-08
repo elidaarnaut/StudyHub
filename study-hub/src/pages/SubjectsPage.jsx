@@ -16,10 +16,12 @@ function SubjectsPage(){
                     <div className="artsSection">
                         <h1>ART</h1>
                         <hr />
+                        <Slider></Slider>
                     </div>
                     <div className="socialSciences">
                         <h1>SOCIAL SCIENCES</h1>
                         <hr />
+                        <Slider></Slider>
                     </div>
 
                 </div>

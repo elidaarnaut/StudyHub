@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
+import SliderItem from './SliderItem'; // Ensure the correct path is used
 
 const Slider = () => {
     const [current, setCurrent] = useState(0);
-    const numDivs = 10; // Total number of divs
+    const numItems = 10; // Total number of items in the slider
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrent((current) => (current + 1) % numDivs);
-        }, 3000); // Rotate divs every 3 seconds
+            setCurrent((current) => (current + 1) % numItems);
+        }, 3000); // Change slides every 3 seconds
         return () => clearInterval(interval);
     }, []);
 
-    // Helper function to determine which divs to show
-    const getDivsToShow = () => {
+    // Helper function to determine which items to show
+    const getItemsToShow = () => {
         return [
-            (current % numDivs),
-            ((current + 1) % numDivs),
-            ((current + 2) % numDivs)
+            (current % numItems),
+            ((current + 1) % numItems),
+            ((current + 2) % numItems)
         ];
     };
 
-    const divsToShow = getDivsToShow();
+    const itemsToShow = getItemsToShow();
 
     return (
         <div className="slider">
-            {divsToShow.map((index) => (
-                <div key={index} className="slide">
-                    Div {index + 1}
-                </div>
+            {itemsToShow.map((index) => (
+                <SliderItem key={index} id={`item-${index + 1}`} /> // Assuming SliderItem accepts an 'id' or similar prop
             ))}
         </div>
     );

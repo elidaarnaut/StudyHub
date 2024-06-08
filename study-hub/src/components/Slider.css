@@ -1,14 +1,14 @@
 .slider {
     display: flex;
     width: 100%; /* Full width of the container */
-    height: 250px;
+    height: 270px;
     overflow: hidden;
     position: relative;
     justify-content: center; /* Center the slides */
     align-items: center;
 }
 
-.slide {
+.slider-item {
     width: 25%; /* Each slide takes up 25% of the slider's width */
     height: 200px; /* Adjust height as needed */
     display: flex;
@@ -18,13 +18,32 @@
     background-color: #007BFF; /* Example background color */
     color: white; /* Text color */
     font-size: 16px; /* Adjust text size as needed */
-    border-radius: 10px; /* Rounded corners like the image */
+    border-radius: 15px; /* Rounded corners like the image */
     box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Shadow for 3D effect */
-    /* transition: transform 0.5s ease-in-out; Smooth transition for scaling */
-    /* transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out; Smooth transition for scaling and shadow */
+    /* transition: transform 0.5s ease-in-out;  */
+    /* Smooth transition for scaling */
+
 }
 
 /* Add transitions for active and neighboring slides */
-.slider .slide:nth-child(2) {
+.slider .slider-item:nth-child(2) {
     transform: scale(1.2); /* Slightly enlarge the middle slide */
+}
+
+.subjectPic {
+    width: 90%;
+    height: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.subjectPic img {
+    width: 100%;
+}
+
+.slider-item-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
