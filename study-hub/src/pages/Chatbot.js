@@ -22,7 +22,7 @@ const Chatbot = () => {
             setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: res.reply }]);
         } catch (error) {
             console.error('Error communicating with chatbot:', error);
-            setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: 'Error communicating with chatbot' }]);
+            setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: 'Error communicating with chatbot :(' }]);
         }
     };
 

@@ -1,17 +1,23 @@
-const Student = require('../models/Student');
+const User = require('../models/User');
+const bcrypt = require('bcryptjs');
 
 // Get student dashboard
 exports.getDashboard = (req, res) => {
-    // for students data in dashboard, later will be used 
     res.send('Welcome to the Student Dashboard');
 };
 
-// registering new student
+// Registering new student
 exports.register = async (req, res) => {
     const { name, email, password } = req.body;
     try {
-        const student = new Student({ name, email, password });
-        await student.save();
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).send('User already exists');
+        }
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = new User({ name, email, password: hashedPassword, role: 'student' });
+        await user.save();
         res.status(201).send('Student registered successfully');
     } catch (err) {
         res.status(400).send('Error registering student');
@@ -21,7 +27,7 @@ exports.register = async (req, res) => {
 // Get a student by ID
 exports.getStudentById = async (req, res) => {
     try {
-        const student = await Student.findById(req.params.id);
+        const student = await User.findById(req.params.id).where('role').equals('student');
         if (!student) {
             return res.status(404).send('Student not found');
         }

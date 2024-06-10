@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const studentController = require('../controllers/studentController');
+const studentController = require('../controllers/studentController'); // Ensure the correct path
 
 // Route for registering a new student
 router.post('/register', studentController.register);
