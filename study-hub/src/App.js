@@ -1,4 +1,5 @@
 import './App.css';
+import { UserProvider } from './contexts/UserContext'; // Adjust the path based on your project structure
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage1 from "./pages/Homepage1";
 import DashboardStudent from './pages/DashboardStudent';
@@ -29,6 +30,7 @@ import SubjectsAdminPage from './pages/SubjectsAdminPage';
 import ProfilePageInstructor from './pages/ProfilePageInstructor';
 import CreateCourse from './pages/CreateCourse';
 import InstructorProfileStudentDash from './pages/InstructorProfileStudentDash';
+import SingularCoursePage from './pages/SingularCoursePage';
 
 
 
@@ -37,7 +39,8 @@ import ModulePage from './pages/modulePage';
 
 function App() {
   return (
-    <Router>
+    <UserProvider>
+      <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
       <Route path="/module" element={<ModulePage/>} />
@@ -71,6 +74,8 @@ function App() {
       <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
       <Route path="/createCourse" element={<CreateCourse />} />
       <Route path="/instructorProfileStudentDash" element={<InstructorProfileStudentDash />} />
+      <Route path="/singularCoursePage" element={<SingularCoursePage />} />
+
 
 
 
@@ -84,6 +89,8 @@ function App() {
 
       </Routes>
     </Router>
+    </UserProvider>
+    
   );
 }
 

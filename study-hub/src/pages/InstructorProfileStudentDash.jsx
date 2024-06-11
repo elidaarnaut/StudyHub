@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TopMenu2 from "../components/TopMenu2";
+import { useUser } from '../contexts/UserContext'; // Adjust the import path
+// import TopMenu2 from "../components/TopMenu2";
 import banner from "../assets/banner.svg";
 import profilePic from "../assets/profilePic.svg";
 import CourseCard from "../components/CourseCard";
-import newcomerBadge from "../assets/newcomerBadge.svg";
+import TopMenu2 from "../components/TopMenu2";
+// import TopMenu3 from "../components/TopMenu3";
 
 function InstructorProfileStudentDash(){
+    
+
     return(
         <div>
             <TopMenu2></TopMenu2>
