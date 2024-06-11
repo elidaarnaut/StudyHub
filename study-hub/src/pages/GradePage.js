@@ -15,6 +15,7 @@ function GradePage() {
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#FFFFFF',
     padding: '20px',
+    paddingLeft: '0px',
   };
 
   const subjectTitleRowStyle = {
@@ -44,6 +45,7 @@ function GradePage() {
     justifyContent: 'center',
     alignItems: 'flex-start',
     marginTop: '30px',
+    
   };
 
   const schoolTitleStyle = {
