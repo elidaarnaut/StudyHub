@@ -1,11 +1,10 @@
 import React from "react";
 import { useUser } from "../contexts/UserContext";  // Make sure the import path is correct
 import { useNavigate } from "react-router-dom";
-import instructorImg from "../assets/InstructorImg.jpg";
 
-function CourseCard() {
-    const { user, loading } = useUser();  // Get user info from context
-    const navigate = useNavigate();  // Updated to use useNavigate
+function CourseCard({ title, description, instructorName, instructorEmail, instructorImg, price }) {
+    const { user, loading } = useUser();
+    const navigate = useNavigate();
 
     const handleMoreInfoClick = () => {
         if (loading) {
@@ -18,7 +17,6 @@ function CourseCard() {
             return;
         }
 
-        // Redirect based on user role
         switch (user.role) {
             case 'admin':
                 navigate('/singularCoursePageAdmin');
@@ -37,22 +35,19 @@ function CourseCard() {
         <div className="courseCard">
             <div className="CCPictureSection">
                 <div className="courseInstructorImg">
-                    <img src={instructorImg} alt="Instructor" />
+                    <img src={instructorImg} alt={instructorName} />
                 </div>
-                <p className="instructorNameCC">John Doe</p>
+                <p className="instructorNameCC">{instructorName}</p>
                 <div className="CCPriceBox">
-                    <p>Price: $$$</p>
+                    <p>Price: ${price}</p>  {/* Display the price */}
                 </div>
             </div>
-
             <div className="CCText">
-                <h1 className="courseName">Course Name</h1>
+                <h1 className="courseName">{title}</h1>
                 <p className="CCBoldedText">Description:</p>
-                <p className="CCInstructorDescription">Course description Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p className="CCInstructorDescription">{description}</p>
                 <p className="CCBoldedText">Instructor email:</p>
-                <p>john.doe@gmail.com</p>
-                <p className="CCBoldedText">Instructor Description:</p>
-                <p className="CCInstructorDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quia adipisci ex quaerat voluptates minima facere mollitia molestiae fugiat esse? Maxime eaque pariatur, dolorum ab error aperiam distinctio odit corporis.</p>
+                <p>{instructorEmail}</p>
                 <button className="card-button" onClick={handleMoreInfoClick}>More info</button>
             </div>
         </div>
