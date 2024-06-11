@@ -31,6 +31,8 @@ import ProfilePageInstructor from './pages/ProfilePageInstructor';
 import CreateCourse from './pages/CreateCourse';
 import InstructorProfileStudentDash from './pages/InstructorProfileStudentDash';
 import SingularCoursePage from './pages/SingularCoursePage';
+import SingularCoursePageAdmin from './pages/SingularCoursePageAdmin';
+import SingularCoursePageInstructor from './pages/SingularCoursePageInstructor';
 
 
 
@@ -71,10 +73,14 @@ function App() {
       <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
       <Route path="/profilePageInstructor" element={<ProfilePageInstructor />} />
       <Route path="/createCourse" element={<CreateCourse />} />
-      <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
+      {/* <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} /> */}
       <Route path="/createCourse" element={<CreateCourse />} />
       <Route path="/instructorProfileStudentDash" element={<InstructorProfileStudentDash />} />
       <Route path="/singularCoursePage" element={<SingularCoursePage />} />
+      <Route path="/singularCoursePageAdmin" element={<SingularCoursePageAdmin />} />
+      <Route path="/singularCoursePageInstructor" element={<SingularCoursePageInstructor />} />
+
+
 
 
 
