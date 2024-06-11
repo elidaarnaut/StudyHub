@@ -25,13 +25,14 @@ import MyCoursesInstructorPage from './pages/MyCoursesInstructorPage';
 import AdminInstructorPage from './pages/AdminInstructorsPage';
 import AdminCoursesPage from './pages/AdminCoursesPage';
 import SignupAdmin from './pages/SignupAdmin';
-
+import ModulePage from './pages/modulePage';
 
 function App() {
   return (
     <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/module" element={<ModulePage/>} />
       <Route path="/signupAdmin" element={<SignupAdmin/>} />
       <Route path="/testsPage" element={<TestsPage/>} />
       <Route path="/login" element={<LoginPage />} />

@@ -1,9 +1,16 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopMenu2 from '../components/TopMenu2';
 
 function GradePage() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleButtonClick = () => {
+    navigate('/unitsPage'); // Navigate to /unitsPage
+  };
+
   const gradePageStyle = {
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#FFFFFF',
@@ -63,7 +70,8 @@ function GradePage() {
     borderColor: '#4F6E9F',
     color: 'white',
     width: '80%',
-    margin: '3px 0',borderRadius: '30px',
+    margin: '3px 0',
+    borderRadius: '30px',
   };
 
   const verticalLineStyle = {
@@ -86,15 +94,15 @@ function GradePage() {
           <h3 style={schoolTitleStyle}>Primary School</h3>
           <Card style={gradeBoxStyle}>
             <Card.Body>
-              <Button style={buttonStyle}>1st Grade</Button>
-              <Button style={buttonStyle}>2nd Grade</Button>
-              <Button style={buttonStyle}>3rd Grade</Button>
-              <Button style={buttonStyle}>4th Grade</Button>
-              <Button style={buttonStyle}>5th Grade</Button>
-              <Button style={buttonStyle}>6th Grade</Button>
-              <Button style={buttonStyle}>7th Grade</Button>
-              <Button style={buttonStyle}>8th Grade</Button>
-              <Button style={buttonStyle}>9th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>1st Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>2nd Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>3rd Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>4th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>5th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>6th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>7th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>8th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>9th Grade</Button>
             </Card.Body>
           </Card>
         </Col>
@@ -105,10 +113,10 @@ function GradePage() {
           <h3 style={schoolTitleStyle}>High School</h3>
           <Card style={gradeBoxStyle}>
             <Card.Body>
-              <Button style={buttonStyle}>1st Grade</Button>
-              <Button style={buttonStyle}>2nd Grade</Button>
-              <Button style={buttonStyle}>3rd Grade</Button>
-              <Button style={buttonStyle}>4th Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>1st Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>2nd Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>3rd Grade</Button>
+              <Button style={buttonStyle} onClick={handleButtonClick}>4th Grade</Button>
             </Card.Body>
           </Card>
         </Col>

@@ -37,7 +37,7 @@ function UnitButton() {
         onClick={toggleDropdown} 
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-          Unit
+        Introduction to Biology
           <img
             src={angle}
             alt="angle"
@@ -58,7 +58,8 @@ function UnitButton() {
             width: '100%', 
           }}>
             <hr style={{ borderColor: 'white', width: '100%' }} />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            In this module, you will learn the basics of biology and its importance in studying life. You will explore the scientific method, a key process for investigating natural phenomena. Additionally, you will become familiar with essential lab safety protocols and the tools used in biological research. This foundation will prepare you for more advanced studies in biology.
+
           </div>
         </Collapse>
       </Button>
