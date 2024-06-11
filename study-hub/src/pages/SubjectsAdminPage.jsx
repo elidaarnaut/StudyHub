@@ -1,31 +1,27 @@
 import React from "react";
-import TopMenu2 from "../components/TopMenu2";
+import TopMenu3 from "../components/TopMenu3";
 import Slider from "../components/Slider";
 
-function SubjectsPage(){
-    const stemSubjects = ["Math", "Biology", "Physics", "Chemistry"];
-    const artsSubjects = ["Music", "Art", "Graphic Design"];
-    const socialSciencesSubjects = ["Geography", "History", "Psychology", "Sociology"];
-
+function SubjectsAdminPage(){
     return(
         <div>
-            <TopMenu2></TopMenu2>
+            <TopMenu3></TopMenu3>
             <div className="sDashboardMain">
                 <div className="next2SideMenuDiv">
                     <div className="stemSection">
                         <h1 className="instructorsTitle">STEM </h1>
                         <hr />
-                        <Slider items={stemSubjects} />
+                        <Slider></Slider>
                     </div>
                     <div className="artsSection">
                         <h1 className="instructorsTitle">ART</h1>
                         <hr />
-                        <Slider items={artsSubjects} />
+                        <Slider></Slider>
                     </div>
                     <div className="socialSciences">
                         <h1 className="instructorsTitle">SOCIAL SCIENCES</h1>
                         <hr />
-                        <Slider items={socialSciencesSubjects} />
+                        <Slider></Slider>
                     </div>
 
                 </div>
@@ -36,4 +32,4 @@ function SubjectsPage(){
     );
 }
 
-export default SubjectsPage;
+export default SubjectsAdminPage;

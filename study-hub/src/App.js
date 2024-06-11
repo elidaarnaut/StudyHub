@@ -25,7 +25,12 @@ import MyCoursesInstructorPage from './pages/MyCoursesInstructorPage';
 import AdminInstructorPage from './pages/AdminInstructorsPage';
 import AdminCoursesPage from './pages/AdminCoursesPage';
 import SignupAdmin from './pages/SignupAdmin';
+
+
+
+
 import ModulePage from './pages/modulePage';
+
 
 function App() {
   return (
@@ -57,6 +62,12 @@ function App() {
       <Route path="/myCourses" element={<MyCoursesInstructorPage />} />
       <Route path="/adminInstructorsPage" element={<AdminInstructorPage />} />
       <Route path="/adminCoursesPage" element={<AdminCoursesPage />} />
+      <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
+      <Route path="/profilePageInstructor" element={<ProfilePageInstructor />} />
+      <Route path="/createCourse" element={<CreateCourse />} />
+
+
+
 
 
 

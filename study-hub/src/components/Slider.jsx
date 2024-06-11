@@ -1,40 +1,31 @@
-import React, { useRef } from 'react';
-import SliderItem from "./SliderItem";
-import rightArrow from "../assets/angle-right (2).svg";
-import leftArrow from "../assets/angle-left.svg";
+import React, { useState, useEffect } from 'react';
+import './Slider.css';
+import SliderItem from './SliderItem';
 
-function Slider(){
+const Slider = ({ items }) => {
+    const [current, setCurrent] = useState(0);
+    const numItems = items.length;
 
-    
-        const sliderRef = useRef(null);
-    
-        const scrollLeft = () => {
-            // Scrolls the slider to the left
-            sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth;
-        };
-    
-        const scrollRight = () => {
-            // Scrolls the slider to the right
-            sliderRef.current.scrollLeft += sliderRef.current.offsetWidth;
-        };
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent(current => (current + 1) % numItems);
+        }, 3000); // Change slides every 3 seconds
+        return () => clearInterval(interval);
+    }, [numItems]);
 
-    return(
-        <div className="sliderContainer">
-            <div className="arrow leftArrow" onClick={scrollLeft}>
-                <img src={leftArrow} alt="" />
-            </div>
-            <div className="slider" ref={sliderRef}>
-                <SliderItem></SliderItem>
-                <SliderItem></SliderItem>
-                <SliderItem></SliderItem>
-                <SliderItem></SliderItem>
+    const itemsToShow = [
+        items[(current % numItems)],
+        items[((current + 1) % numItems)],
+        items[((current + 2) % numItems)]
+    ];
 
-            </div>
-            <div className="arrow rightArrow"  onClick={scrollRight}>
-                <img src={rightArrow} alt="" />
-            </div>
+    return (
+        <div className="slider">
+            {itemsToShow.map((item, index) => (
+                <SliderItem key={index} content={item} active={index === 1} />
+            ))}
         </div>
     );
-}
+};
 
 export default Slider;

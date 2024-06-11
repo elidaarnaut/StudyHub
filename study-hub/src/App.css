@@ -293,6 +293,7 @@
 .next2SideMenuDivProfile {
   margin: 0px;
   width: 100vw;
+  height: fit-content;
   align-items: center;
 }
 
@@ -546,14 +547,19 @@
   position: relative;
   bottom: 50px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  align-items: center;
 }
 
 .profileSides1 {
   width: 40%;
 }
 
+.profileSides4 {
+  width: 25%;
+}
 
-.profileSides2  {
+
+.profileSides2, .profileSides3  {
   width: 35%;
   display: flex;
   justify-self: center;
@@ -561,6 +567,12 @@
   height: 320px;
   overflow: hidden;
   position: relative;
+}
+
+.profileSides3 {
+  height: auto;
+  text-align: justify;
+  width: 60%;
 }
 
 .sectionDiv {
@@ -635,22 +647,28 @@
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: row;
   position: relative;
+  left: 5%;
   top: 60px;
   height: calc(100vh - 60px);
   margin-top: 60px;
+ 
 }
 
 .settingsMenu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   width: 120px;
   color: #023047;
+  position: fixed;
+  right: 5%;
+
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  height: 100vh;
 }
 .sMenuContent {
   display: flex;
@@ -679,6 +697,8 @@
 }
 .accSettings {
   width: 95%;
+  position: relative;
+
   font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }
 
@@ -987,6 +1007,12 @@ label {
   flex-direction: column;
 }
 
+.coursesSection1 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 .instructorsTitle {
@@ -1045,7 +1071,8 @@ label {
   /* does not look like i want it to  */
 }
 
-.card-button {
+.card-button, .card-button1 {
+
   transform: translate(-50%, 125%);
   width: 60%;
   border-radius: 1rem;
@@ -1064,6 +1091,11 @@ label {
 
  .instructorCard:hover .card-button {
   transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ .badgesContainer .card-button1 {
+  transform: translate(-50%, -20%);
   opacity: 1;
  }
 
@@ -1182,6 +1214,53 @@ label {
   margin-bottom: 20px;
 
  }
+
+ /* CREATE COURSE */
+
+ .create-course-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.create-course-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+
 
 
 
@@ -1360,6 +1439,10 @@ label {
 
    .CCText {
     width: 100%;
+   }
+
+   .overlayProfile {
+    display: none;
    }
 
 }
