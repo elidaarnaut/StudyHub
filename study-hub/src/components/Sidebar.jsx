@@ -22,7 +22,7 @@ function Sidebar({ toggleNav }) {  // Receive toggleNav as a prop
         <Link to="/instructors" className='noLink'><p>Instructors</p></Link>
         <Link to="/courses" className='noLink'><p>Courses</p></Link>
         <Link to="/chatbot" className='link'><p>AI Chat</p></Link>
-        <Link to="/" className='noLink'><p>Virtal Lab</p></Link>
+        <Link to="/phet-simulation" className='noLink'><p>Virtal Lab</p></Link>
         <Link to="/subjects" className="link"><p>Self-Study</p></Link>
         <hr className='sidebarHr'/>
         <h2 className="sideMenuTitle">MY ACCOUNT</h2>

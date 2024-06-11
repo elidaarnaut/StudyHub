@@ -33,7 +33,7 @@ import InstructorProfileStudentDash from './pages/InstructorProfileStudentDash';
 import SingularCoursePage from './pages/SingularCoursePage';
 import SingularCoursePageAdmin from './pages/SingularCoursePageAdmin';
 import SingularCoursePageInstructor from './pages/SingularCoursePageInstructor';
-
+import PhetSimulation from './pages/PhetSimulation';
 
 
 import ModulePage from './pages/modulePage';
@@ -47,6 +47,7 @@ function App() {
       <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/phet-simulation" element={<PhetSimulation />} />
       <Route path="/module" element={<ModulePage/>} />
       <Route path="/signupAdmin" element={<SignupAdmin/>} />
       <Route path="/quizinfo" element={<QuizInfo/>} />

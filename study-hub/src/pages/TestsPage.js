@@ -3,21 +3,20 @@ import { sendMessageToChatbot } from '../services/apiService';
 import TopMenu2 from "../components/TopMenu2";
 import abstract from "../assets/abstract1.webp";  
 import aiAvatar from "../assets/aiavatar.webp";  
-
+ 
 const TestsPage = () => {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
-      
         { sender: 'AI Chatbot', text: 'Write about a day you visited a garden to look at plants and animals. What did you see? What did you like the most?' }
     ]);
-
+ 
     const sendMessage = async () => {
         if (!message.trim()) return;
-
+ 
         const newChatHistory = [...chatHistory, { sender: 'You', text: message }];
         setChatHistory(newChatHistory);
         setMessage('');
-
+ 
         try {
             const res = await sendMessageToChatbot(message);
             setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: res.reply }]);
@@ -26,13 +25,13 @@ const TestsPage = () => {
             setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: 'Error communicating with chatbot' }]);
         }
     };
-
+ 
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             sendMessage();
         }
     };
-
+ 
     const containerStyle = {
         display: 'flex',
         backgroundColor: '#282c34',
@@ -43,7 +42,7 @@ const TestsPage = () => {
         left: 0,
         right: 0
     };
-
+ 
     const sideMenuStyle = {
         width: '240px',
         padding: '10px',
@@ -53,7 +52,7 @@ const TestsPage = () => {
         backgroundPosition: 'center',
         color: 'white'
     };
-
+ 
     const chatboxStyle = {
         flex: 1,
         border: '1px solid white',
@@ -62,7 +61,7 @@ const TestsPage = () => {
         flexDirection: 'column',
         position: 'relative'
     };
-
+ 
     const chatLogStyle = {
         flex: 1,
         overflowY: 'auto',
@@ -70,13 +69,13 @@ const TestsPage = () => {
         scrollbarWidth: 'thin', // For Firefox
         scrollbarColor: 'gray white' // For Firefox
     };
-
+ 
     const chatMessageStyle = {
         display: 'flex',
         justifyContent: 'center',
         padding: '10px'
     };
-
+ 
     const chatMessageCenterStyle = {
         display: 'flex',
         alignItems: 'center',
@@ -85,7 +84,7 @@ const TestsPage = () => {
         padding: '12px',
         borderRadius: '5px'
     };
-
+ 
     const avatarStyle = (color) => ({
         backgroundColor: color,
         borderRadius: '50%',
@@ -97,7 +96,7 @@ const TestsPage = () => {
         color: '#023047',
         fontWeight: 'bold'
     });
-
+ 
     const messageStyle = {
         marginLeft: '16px',
         padding: '12px',
@@ -107,7 +106,7 @@ const TestsPage = () => {
         textAlign: 'left',
         color: 'black'
     };
-
+ 
     const chatInputHolderStyle = {
         padding: '24px',
         position: 'relative',
@@ -120,7 +119,7 @@ const TestsPage = () => {
         backgroundColor: '#FFFFFF',
         borderTop: '1px solid #EEEEEE'
     };
-
+ 
     const chatInputStyle = {
         backgroundColor: '#EEEEEE',
         padding: '12px',
@@ -133,7 +132,7 @@ const TestsPage = () => {
         resize: 'none',
         marginRight: '10px'
     };
-
+ 
     const sendButtonStyle = {
         backgroundColor: '#023047',
         border: 'none',
@@ -144,53 +143,53 @@ const TestsPage = () => {
         alignItems: 'center',
         justifyContent: 'center'
     };
-
+ 
     const sendIconStyle = {
         fill: 'white',
         width: '24px',
         height: '24px'
     };
-
+ 
     return (
-        <>
-            <TopMenu2 />
-            <div style={containerStyle}>
-                <aside style={sideMenuStyle}>
+<>
+<TopMenu2 />
+<div style={containerStyle}>
+<aside style={sideMenuStyle}>
                     {/* Side menu content */}
-                </aside>
-                <section style={chatboxStyle}>
-                    <div style={chatLogStyle}>
+</aside>
+<section style={chatboxStyle}>
+<div style={chatLogStyle}>
                         {chatHistory.map((chat, index) => (
-                            <div key={index} style={chatMessageStyle}>
-                                <div style={chatMessageCenterStyle}>
+<div key={index} style={chatMessageStyle}>
+<div style={chatMessageCenterStyle}>
                                     {chat.sender === 'AI Chatbot' ? (
-                                        <img src={aiAvatar} alt="AI Avatar" style={{ borderRadius: '50%', width: '40px', height: '40px' }} />
+<img src={aiAvatar} alt="AI Avatar" style={{ borderRadius: '50%', width: '40px', height: '40px' }} />
                                     ) : (
-                                        <div style={avatarStyle('#EEEEEE')}>{chat.sender[0]}</div>
+<div style={avatarStyle('#EEEEEE')}>{chat.sender[0]}</div>
                                     )}
-                                    <div style={messageStyle}>{chat.text}</div>
-                                </div>
-                            </div>
+<div style={messageStyle}>{chat.text}</div>
+</div>
+</div>
                         ))}
-                    </div>
-                    <div style={chatInputHolderStyle}>
-                        <input
+</div>
+<div style={chatInputHolderStyle}>
+<input
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                             onKeyPress={handleKeyPress} // Added event handler for Enter key
                             style={chatInputStyle}
                         />
-                        <button onClick={sendMessage} style={sendButtonStyle}>
-                            <svg style={sendIconStyle} viewBox="0 0 24 24">
-                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                            </svg>
-                        </button>
-                    </div>
-                </section>
-            </div>
-        </>
+<button onClick={sendMessage} style={sendButtonStyle}>
+<svg style={sendIconStyle} viewBox="0 0 24 24">
+<path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+</svg>
+</button>
+</div>
+</section>
+</div>
+</>
     );
 };
-
+ 
 export default TestsPage;
