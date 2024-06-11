@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TopMenu2 from "../components/TopMenu2";
+import TopMenu4 from "../components/TopMenu4";
 import banner from "../assets/banner.svg";
 import profilePic from "../assets/profilePic.svg";
 import newcomerBadge from "../assets/newcomerBadge.svg";
 
-function ProfilePage(){
+function ProfilePageInstructor(){
     return(
         <div>
-            <TopMenu2></TopMenu2>
+            <TopMenu4></TopMenu4>
             <div className="next2SideMenuDivProfile">
                 <img src={banner} alt="Banner" className="banner" />
                 <div className="ProfilePicDiv">                
@@ -48,4 +48,4 @@ function ProfilePage(){
     );
 }
 
-export default ProfilePage;
+export default ProfilePageInstructor;

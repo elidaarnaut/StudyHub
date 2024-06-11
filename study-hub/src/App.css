@@ -293,6 +293,7 @@
 .next2SideMenuDivProfile {
   margin: 0px;
   width: 100vw;
+  height: fit-content;
   align-items: center;
 }
 
@@ -1053,7 +1054,8 @@ label {
   /* does not look like i want it to  */
 }
 
-.card-button {
+.card-button, .card-button1 {
+
   transform: translate(-50%, 125%);
   width: 60%;
   border-radius: 1rem;
@@ -1072,6 +1074,11 @@ label {
 
  .instructorCard:hover .card-button {
   transform: translate(-50%, 50%);
+  opacity: 1;
+ }
+
+ .badgesContainer .card-button1 {
+  transform: translate(-50%, -20%);
   opacity: 1;
  }
 
@@ -1370,6 +1377,10 @@ label {
 
    .CCText {
     width: 100%;
+   }
+
+   .overlayProfile {
+    display: none;
    }
 
 }

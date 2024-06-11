@@ -26,6 +26,7 @@ import AdminInstructorPage from './pages/AdminInstructorsPage';
 import AdminCoursesPage from './pages/AdminCoursesPage';
 import SignupAdmin from './pages/SignupAdmin';
 import SubjectsAdminPage from './pages/SubjectsAdminPage';
+import ProfilePageInstructor from './pages/ProfilePageInstructor';
 
 
 function App() {
@@ -58,6 +59,8 @@ function App() {
       <Route path="/adminInstructorsPage" element={<AdminInstructorPage />} />
       <Route path="/adminCoursesPage" element={<AdminCoursesPage />} />
       <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
+      <Route path="/profilePageInstructor" element={<ProfilePageInstructor />} />
+
 
 
 

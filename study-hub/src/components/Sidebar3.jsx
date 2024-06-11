@@ -26,7 +26,7 @@ function Sidebar3({ toggleNav }) {  // Receive toggleNav as a prop
           <Link to="/myCourses"  className='noLink'><p>My Courses</p></Link>
           <hr className='sidebarHr' />
           <h2 className="sideMenuTitle">MY ACCOUNT</h2>
-          <Link to="/profile" className="link"><p>Profile</p></Link>
+          <Link to="/profilePageInstructor" className="link"><p>Profile</p></Link>
           <Link to="/settings1" className="link"><p>Settings</p></Link>
           <Link><p>Log out</p></Link>
         </div>
