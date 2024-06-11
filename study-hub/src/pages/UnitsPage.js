@@ -81,6 +81,7 @@ function UnitsPage() {
   const pageStyle = {
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#FFFFFF',
+    paddingLeft: '0px',
   };
 
   const titleRowStyle = {
