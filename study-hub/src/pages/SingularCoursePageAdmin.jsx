@@ -1,14 +1,14 @@
-// SINGULAR COURSE PAGE FOR STUDENT
+// SINGULAR COURSE PAGE FOR ADMIN
 
 import React from "react";
 import TopMenu2 from "../components/TopMenu2";
 import "../App.css";
 import instructorPic from "../assets/InstructorImg.jpg";
 
-function SingularCoursePage(){
+function SingularCoursePageAdmin(){
     return(
         <div>
-            <TopMenu2></TopMenu2>
+            <TopMenu3></TopMenu3>
             <div className="sDashboardMain">
                 <div className="next2SideMenuDiv">
                     <p className="courseTitleSC">Course Name</p>
@@ -50,4 +50,4 @@ function SingularCoursePage(){
     );
 }
 
-export default SingularCoursePage;
+export default SingularCoursePageAdmin;
