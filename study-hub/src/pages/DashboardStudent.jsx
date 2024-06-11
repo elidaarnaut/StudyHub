@@ -18,9 +18,9 @@ function DashboardStudent(){
                         <h1 className="instructorsTitle">My Subjects</h1>
                         <hr  className="dashHr"/>
                         <div className="subjectsListedDash">
+                            {/* <MySubjectsDash></MySubjectsDash>
                             <MySubjectsDash></MySubjectsDash>
-                            <MySubjectsDash></MySubjectsDash>
-                            <MySubjectsDash></MySubjectsDash>
+                            <MySubjectsDash></MySubjectsDash> */}
                         </div>
                         
                     </div>

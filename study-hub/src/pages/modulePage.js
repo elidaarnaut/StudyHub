@@ -1,15 +1,16 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TopMenu2 from '../components/TopMenu2'; // Import the TopMenu2 component
 
 const ModulePage = () => {
+  const navigate = useNavigate();
+
   const pageStyle = {
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#FFFFFF',
     paddingTop: '65px',
-    
-
   };
 
   const titleStyle = {
@@ -56,10 +57,13 @@ const ModulePage = () => {
     fontWeight: 'bold',
   };
 
+  const handleTestYourKnowledgeClick = () => {
+    navigate('/quizinfo');
+  };
+
   return (
     <Container fluid style={pageStyle}>
-                  <TopMenu2></TopMenu2>
-
+      <TopMenu2 />
       <Row>
         <Col>
           <h1 style={titleStyle}>Introduction to Biology</h1>
@@ -135,7 +139,9 @@ const ModulePage = () => {
             </Card.Body>
           </Card>
           <div style={buttonContainerStyle}>
-            <Button style={buttonStyle}>Test Your Knowledge</Button>
+            <Button style={buttonStyle} onClick={handleTestYourKnowledgeClick}>
+              Test Your Knowledge
+            </Button>
           </div>
         </Col>
       </Row>
