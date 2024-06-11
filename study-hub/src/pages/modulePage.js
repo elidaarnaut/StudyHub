@@ -7,7 +7,9 @@ const ModulePage = () => {
   const pageStyle = {
     fontFamily: 'Arial, sans-serif',
     backgroundColor: '#FFFFFF',
-    padding: '65px',
+    paddingTop: '65px',
+    
+
   };
 
   const titleStyle = {

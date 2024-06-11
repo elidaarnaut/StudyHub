@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
         const response = await openai.chat.completions.create({
             model: 'gpt-3.5-turbo',
             messages: [
-                { role: 'system', content: 'You are a helpful assistant.' },
+                { role: 'system', content: 'You are teacher to elementary school kids' },
                 { role: 'user', content: message }
             ],
         });

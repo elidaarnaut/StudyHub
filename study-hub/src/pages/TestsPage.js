@@ -8,7 +8,7 @@ const TestsPage = () => {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
       
-        { sender: 'AI Chatbot', text: 'Explain why the equator is warmer than the poles. Use facts about the Earths shape and the suns rays to support your answer. Lets see if you answer is correct!' }
+        { sender: 'AI Chatbot', text: 'Write about a day you visited a garden to look at plants and animals. What did you see? What did you like the most?' }
     ]);
 
     const sendMessage = async () => {
@@ -81,7 +81,7 @@ const TestsPage = () => {
         display: 'flex',
         alignItems: 'center',
         width: '100%',
-        backgroundColor: '#023047',
+        backgroundColor: '#f8d7da',
         padding: '12px',
         borderRadius: '5px'
     };
@@ -101,11 +101,11 @@ const TestsPage = () => {
     const messageStyle = {
         marginLeft: '16px',
         padding: '12px',
-        backgroundColor: '#023047',
+        backgroundColor: '#f8d7da',
         borderRadius: '5px',
         flex: 1,
         textAlign: 'left',
-        color: 'white'
+        color: 'black'
     };
 
     const chatInputHolderStyle = {

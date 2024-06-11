@@ -1,4 +1,3 @@
-// index.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -7,6 +6,9 @@ const studentRoutes = require('./routes/studentRoutes');
 const instructorRoutes = require('./routes/instructorRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const chatbotRoutes = require('./routes/chatbot');
+const authRoutes = require('./routes/authRoutes'); // Import authRoutes
+const bodyParser = require('body-parser');
+const multipleChoiceRoutes = require('./routes/multipleChoiceRoutes'); // Ensure the path is correct
 
 const app = express();
 
@@ -29,14 +31,19 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Admin routes
 app.use('/api/admin', adminRoutes);
 
+app.use('/api/multipleChoiceQuestions', multipleChoiceRoutes);
+
 // Student routes
 app.use('/api/students', studentRoutes);
 
 // Instructor routes
-app.use('/instructors', instructorRoutes);
+app.use('/api/instructors', instructorRoutes);
 
 // Chatbot routes
 app.use('/api/chatbot', chatbotRoutes); // Ensure this line is correct
+
+// Auth routes
+app.use('/api/auth', authRoutes); // Add authRoutes
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
