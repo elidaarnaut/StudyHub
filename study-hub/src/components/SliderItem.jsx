@@ -1,14 +1,11 @@
 import React from 'react';
 import './Slider.css';  
-import subjectCoverMath from "../assets/mathSubject.jpg";
 
-const SliderItem = ({ id, content }) => {
+const SliderItem = ({ content, active }) => {
+    const itemClass = active ? "slider-item active" : "slider-item";
     return (
-        <div className="slider-item" id={id}>
+        <div className={itemClass}>
             <div className="slider-item-content">
-                <div className='subjectPic'>
-                    <img src={subjectCoverMath} alt={content} />
-                </div>
                 <p>{content}</p>
             </div>
         </div>
