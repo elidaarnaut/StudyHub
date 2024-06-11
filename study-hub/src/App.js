@@ -25,7 +25,10 @@ import MyCoursesInstructorPage from './pages/MyCoursesInstructorPage';
 import AdminInstructorPage from './pages/AdminInstructorsPage';
 import AdminCoursesPage from './pages/AdminCoursesPage';
 import SignupAdmin from './pages/SignupAdmin';
-
+import SubjectsAdminPage from './pages/SubjectsAdminPage';
+import ProfilePageInstructor from './pages/ProfilePageInstructor';
+import CreateCourse from './pages/CreateCourse';
+import InstructorProfileStudentDash from './pages/InstructorProfileStudentDash';
 
 
 
@@ -65,6 +68,13 @@ function App() {
       <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
       <Route path="/profilePageInstructor" element={<ProfilePageInstructor />} />
       <Route path="/createCourse" element={<CreateCourse />} />
+      <Route path="/adminSubjectsPage" element={<SubjectsAdminPage />} />
+      <Route path="/createCourse" element={<CreateCourse />} />
+      <Route path="/instructorProfileStudentDash" element={<InstructorProfileStudentDash />} />
+
+
+
+
 
 
 
