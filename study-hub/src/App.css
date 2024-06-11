@@ -547,14 +547,19 @@
   position: relative;
   bottom: 50px;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  align-items: center;
 }
 
 .profileSides1 {
   width: 40%;
 }
 
+.profileSides4 {
+  width: 25%;
+}
 
-.profileSides2  {
+
+.profileSides2, .profileSides3  {
   width: 35%;
   display: flex;
   justify-self: center;
@@ -562,6 +567,12 @@
   height: 320px;
   overflow: hidden;
   position: relative;
+}
+
+.profileSides3 {
+  height: auto;
+  text-align: justify;
+  width: 60%;
 }
 
 .sectionDiv {
@@ -992,6 +1003,12 @@ label {
 
 .instructorsSectionDash, .coursesSection {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.coursesSection1 {
+  width: 90%;
   display: flex;
   flex-direction: column;
 }
