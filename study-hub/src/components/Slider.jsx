@@ -1,33 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import './Slider.css';
-import SliderItem from './SliderItem'; // Ensure the correct path is used
+import SliderItem from './SliderItem';
 
-const Slider = () => {
+const Slider = ({ items }) => {
     const [current, setCurrent] = useState(0);
-    const numItems = 10; // Total number of items in the slider
+    const numItems = items.length;
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrent((current) => (current + 1) % numItems);
+            setCurrent(current => (current + 1) % numItems);
         }, 3000); // Change slides every 3 seconds
         return () => clearInterval(interval);
-    }, []);
+    }, [numItems]);
 
-    // Helper function to determine which items to show
-    const getItemsToShow = () => {
-        return [
-            (current % numItems),
-            ((current + 1) % numItems),
-            ((current + 2) % numItems)
-        ];
-    };
-
-    const itemsToShow = getItemsToShow();
+    const itemsToShow = [
+        items[(current % numItems)],
+        items[((current + 1) % numItems)],
+        items[((current + 2) % numItems)]
+    ];
 
     return (
         <div className="slider">
-            {itemsToShow.map((index) => (
-                <SliderItem key={index} id={`item-${index + 1}`} /> // Assuming SliderItem accepts an 'id' or similar prop
+            {itemsToShow.map((item, index) => (
+                <SliderItem key={index} content={item} active={index === 1} />
             ))}
         </div>
     );

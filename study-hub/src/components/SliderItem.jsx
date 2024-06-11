@@ -1,15 +1,15 @@
 import React from 'react';
-import './Slider.css';  // Ensure you have corresponding CSS for styling
+import './Slider.css';  
 import subjectCoverMath from "../assets/mathSubject.jpg";
 
 const SliderItem = ({ id, content }) => {
     return (
-        <div className={`slider-item`} id={id}>
+        <div className="slider-item" id={id}>
             <div className="slider-item-content">
                 <div className='subjectPic'>
-                    <img src={subjectCoverMath} alt="" />
+                    <img src={subjectCoverMath} alt={content} />
                 </div>
-                <p>Subject number {id}</p>
+                <p>{content}</p>
             </div>
         </div>
     );
