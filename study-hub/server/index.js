@@ -1,19 +1,19 @@
+// index.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
 const instructorRoutes = require('./routes/instructorRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 const chatbotRoutes = require('./routes/chatbot');
-const tests = require('./routes/tests');
 
 const app = express();
 
 // Middleware
 app.use(cors());
-app.use(express.json()); // Ensure this is before route definitions
+app.use(express.json());
 
-// Connecting to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
     bufferCommands: false,
     serverSelectionTimeoutMS: 5000,
@@ -26,16 +26,17 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('Error connecting to MongoDB:', err);
 });
 
+// Admin routes
+app.use('/api/admin', adminRoutes);
+
 // Student routes
-app.use('/students', studentRoutes);
+app.use('/api/students', studentRoutes);
 
 // Instructor routes
 app.use('/instructors', instructorRoutes);
 
 // Chatbot routes
-app.use('/chatbot', chatbotRoutes);
-
-app.use('/tests', tests);
+app.use('/api/chatbot', chatbotRoutes); // Ensure this line is correct
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

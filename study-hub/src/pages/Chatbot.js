@@ -7,7 +7,7 @@ import aiAvatar from "../assets/aiavatar.webp";  // Import the AI avatar image
 const Chatbot = () => {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
-        { sender: 'AI Chatbot', text: 'Hello! Lets learn new languages together ! Ask me ! ' }
+        { sender: 'AI Chatbot', text: 'Hello! Lets learn new languages together! Ask me!' }
     ]);
 
     const sendMessage = async () => {
@@ -22,7 +22,13 @@ const Chatbot = () => {
             setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: res.reply }]);
         } catch (error) {
             console.error('Error communicating with chatbot:', error);
-            setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: 'Error communicating with chatbot' }]);
+            setChatHistory([...newChatHistory, { sender: 'AI Chatbot', text: 'Error communicating with chatbot :(' }]);
+        }
+    };
+
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
         }
     };
 
@@ -41,16 +47,16 @@ const Chatbot = () => {
         width: '240px',
         padding: '10px',
         backgroundColor: '#202123',
-        backgroundImage: `url(${abstract})`,  
-        backgroundSize: 'cover',  
-        backgroundPosition: 'center', 
-        color: 'white'  
+        backgroundImage: `url(${abstract})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        color: 'white'
     };
 
     const chatboxStyle = {
         flex: 1,
         border: '1px solid white',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FFFFFF', // Adjusted color
         display: 'flex',
         flexDirection: 'column',
         position: 'relative'
@@ -59,7 +65,9 @@ const Chatbot = () => {
     const chatLogStyle = {
         flex: 1,
         overflowY: 'auto',
-        padding: '20px'
+        padding: '20px',
+        scrollbarWidth: 'thin', // For Firefox
+        scrollbarColor: 'gray white' // For Firefox
     };
 
     const chatMessageStyle = {
@@ -72,7 +80,7 @@ const Chatbot = () => {
         display: 'flex',
         alignItems: 'center',
         width: '100%',
-        backgroundColor: 'rgba(156, 184, 193)',
+        backgroundColor: '#d93030',
         padding: '12px',
         borderRadius: '30px'
     };
@@ -85,14 +93,14 @@ const Chatbot = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'white',
+        color: '#d93030',
         fontWeight: 'bold'
     });
 
     const messageStyle = {
         marginLeft: '16px',
         padding: '12px',
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: 'rgba(238, 238, 238, 0.1)',
         borderRadius: '30px',
         flex: 1,
         textAlign: 'left',
@@ -101,19 +109,17 @@ const Chatbot = () => {
 
     const chatInputHolderStyle = {
         padding: '24px',
-        position: 'absolute',
-        borderRadius: '30px',
-        bottom: 0,
-        left: 0,
-        right: 0,
+        position: 'relative',
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        borderTop: '1px solid #EEEEEE',
     };
 
     const chatInputStyle = {
-        backgroundColor: 'rgba(156, 184, 193)',
+        backgroundColor: '#EEEEEE',
         padding: '12px',
-        color: 'white',
+        color: 'black',  // Set text color to black
         fontSize: '1.25em',
         width: '100%',
         borderRadius: '30px',
@@ -121,11 +127,12 @@ const Chatbot = () => {
         outline: 'none',
         resize: 'none',
         marginRight: '10px',
-        color: 'white'  // Set text color to white
+        marginBottom: 0,
     };
 
     const sendButtonStyle = {
-         backgroundColor: 'rgba(156, 184, 193)',
+        backgroundColor: '#d93030',
+        marginBottom: 0,
         border: 'none',
         borderRadius: '50%',
         padding: '14px',
@@ -156,7 +163,7 @@ const Chatbot = () => {
                                     {chat.sender === 'AI Chatbot' ? (
                                         <img src={aiAvatar} alt="AI Avatar" style={{ borderRadius: '50%', width: '40px', height: '40px' }} />
                                     ) : (
-                                        <div style={avatarStyle('red')}>{chat.sender[0]}</div>
+                                        <div style={avatarStyle('#EEEEEE')}>{chat.sender[0]}</div>
                                     )}
                                     <div style={messageStyle}>{chat.text}</div>
                                 </div>
@@ -168,7 +175,7 @@ const Chatbot = () => {
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            
+                            onKeyPress={handleKeyPress} // Added event handler for Enter key
                             style={chatInputStyle}
                         />
                         <button onClick={sendMessage} style={sendButtonStyle}>

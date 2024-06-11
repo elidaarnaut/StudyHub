@@ -24,6 +24,7 @@ import TestsPage from './pages/TestsPage';
 import MyCoursesInstructorPage from './pages/MyCoursesInstructorPage';
 import AdminInstructorPage from './pages/AdminInstructorsPage';
 import AdminCoursesPage from './pages/AdminCoursesPage';
+import SignupAdmin from './pages/SignupAdmin';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Homepage1 />} />
+      <Route path="/signupAdmin" element={<SignupAdmin/>} />
       <Route path="/testsPage" element={<TestsPage/>} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/chatbot" element={<Chatbot />} /> 
