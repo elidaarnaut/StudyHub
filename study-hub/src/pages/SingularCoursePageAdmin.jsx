@@ -1,7 +1,7 @@
 // SINGULAR COURSE PAGE FOR ADMIN
 
 import React from "react";
-import TopMenu2 from "../components/TopMenu2";
+import TopMenu3 from "../components/TopMenu3";
 import "../App.css";
 import instructorPic from "../assets/InstructorImg.jpg";
 
