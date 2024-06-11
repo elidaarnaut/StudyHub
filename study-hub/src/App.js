@@ -37,6 +37,8 @@ import SingularCoursePageInstructor from './pages/SingularCoursePageInstructor';
 
 
 import ModulePage from './pages/modulePage';
+import QuizInfo from './pages/QuizAnnouncement';
+import QuizPage from './pages/QuizPage';
 
 
 function App() {
@@ -47,7 +49,9 @@ function App() {
       <Route path="/" element={<Homepage1 />} />
       <Route path="/module" element={<ModulePage/>} />
       <Route path="/signupAdmin" element={<SignupAdmin/>} />
+      <Route path="/quizinfo" element={<QuizInfo/>} />
       <Route path="/testsPage" element={<TestsPage/>} />
+      <Route path="/quizPage" element={<QuizPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/chatbot" element={<Chatbot />} /> 
       <Route path="/dashboardStudent" element={<DashboardStudent />} />

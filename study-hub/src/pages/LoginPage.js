@@ -2,24 +2,20 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { login } from '../services/apiService';
-
 function LoginPage() {
     const [inputs, setInputs] = useState({ email: '', password: '' });
     const [error, setError] = useState('');
     const navigate = useNavigate();
-
     const handleChange = (event) => {
         const { name, value } = event.target;
         setInputs((prevState) => ({ ...prevState, [name]: value }));
     };
-
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             const response = await login(inputs);
             console.log('Login successful:', response);
             setError('');
-
             // Check the user's role and navigate to the respective dashboard
             if (response.user.role === 'student') {
                 navigate('/dashboardStudent');
@@ -27,13 +23,13 @@ function LoginPage() {
                 navigate('/dashboardInstructor');
             } else {
                 // Default or admin dashboard
+                //navigate('/dashboardAdmin');
                 navigate('/dashboardAdministrator');
             }
         } catch (error) {
             setError(error.message || 'Error logging in');
         }
     };
-
     return (
         <Container fluid className="min-vh-100 d-flex" style={{ backgroundColor: '#2D4263' }}>
             <Row className="w-100 align-items-center">
@@ -57,5 +53,4 @@ function LoginPage() {
         </Container>
     );
 }
-
 export default LoginPage;
