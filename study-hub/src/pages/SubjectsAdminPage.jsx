@@ -1,11 +1,11 @@
 import React from "react";
-import TopMenu2 from "../components/TopMenu2";
+import TopMenu3 from "../components/TopMenu3";
 import Slider from "../components/Slider";
 
-function SubjectsPage(){
+function SubjectsAdminPage(){
     return(
         <div>
-            <TopMenu2></TopMenu2>
+            <TopMenu3></TopMenu3>
             <div className="sDashboardMain">
                 <div className="next2SideMenuDiv">
                     <div className="stemSection">
@@ -32,4 +32,4 @@ function SubjectsPage(){
     );
 }
 
-export default SubjectsPage;
+export default SubjectsAdminPage;
