@@ -1,3 +1,4 @@
+// index.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -5,7 +6,6 @@ const cors = require('cors');
 const studentRoutes = require('./routes/studentRoutes');
 const instructorRoutes = require('./routes/instructorRoutes');
 const adminRoutes = require('./routes/adminRoutes');
-const authRoutes = require('./routes/authRoutes');
 const chatbotRoutes = require('./routes/chatbot');
 
 const app = express();
@@ -26,9 +26,6 @@ mongoose.connect(process.env.MONGODB_URI, {
     console.error('Error connecting to MongoDB:', err);
 });
 
-// Auth routes
-app.use('/api/auth', authRoutes);
-
 // Admin routes
 app.use('/api/admin', adminRoutes);
 
@@ -36,7 +33,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/students', studentRoutes);
 
 // Instructor routes
-app.use('/api/instructors', instructorRoutes);
+app.use('/instructors', instructorRoutes);
 
 // Chatbot routes
 app.use('/api/chatbot', chatbotRoutes); // Ensure this line is correct
