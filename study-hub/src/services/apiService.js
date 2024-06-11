@@ -46,10 +46,9 @@ export const sendMessageToChatbot = async (message) => {
 };
 // API service calls for instructors
 
-// Register a new instructor (Step 1)
 export const registerInstructorStep1 = async (instructorData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/api/instructors/register-step1`, instructorData); // Corrected path
+        const response = await axios.post(`${API_BASE_URL}/instructors/register-step1`, instructorData);
         return response.data;
     } catch (error) {
         throw error.response ? error.response.data : new Error('Error registering instructor');
@@ -59,22 +58,21 @@ export const registerInstructorStep1 = async (instructorData) => {
 // Complete instructor registration (Step 2)
 export const completeInstructorRegistration = async (id, formData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/api/instructors/register-step2/${id}`, formData, {
+        const response = await axios.post(`${API_BASE_URL}/instructors/register-step2/${id}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
-        }); // Corrected path
+        });
         return response.data;
     } catch (error) {
         throw error.response ? error.response.data : new Error('Error completing registration');
     }
 };
-
-// Register a new admin
+//a new admin
 export const registerAdmin = async (adminData) => {
     try {
-        const response = await axios.post(`${API_BASE_URL}/api/admin/register`, adminData); // Corrected path
-        return response.data;
+      const response = await axios.post(`${API_BASE_URL}/api/admin/register`, adminData); // Corrected path
+       return response.data;
     } catch (error) {
         throw error.response ? error.response.data : new Error('Error registering admin');
     }
@@ -87,5 +85,14 @@ export const login = async (userData) => {
         return response.data; // Ensure response includes token, userId, and role
     } catch (error) {
         throw error.response ? error.response.data : new Error('Error logging in');
+    }
+};
+
+export const loginAdmin = async (adminData) => {
+    try {
+        const response = await axios.post(`${API_BASE_URL}/api/admin/login`, adminData);
+        return response.data;
+    } catch (error) {
+        throw error.response ? error.response.data : new Error('Error logging in as admin');
     }
 };

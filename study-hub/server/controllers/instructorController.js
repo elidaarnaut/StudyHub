@@ -1,9 +1,9 @@
-const User = require('../models/User');
-const bcrypt = require('bcryptjs');
+const Instructor = require('../models/instructorModel');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const fs = require('fs');
 
-// Get instructor dashboard
+// Get instructor dashboard since thts where it leads
 exports.getDashboard = (req, res) => {
     res.send('Welcome to the Instructor Dashboard');
 };
@@ -12,19 +12,14 @@ exports.getDashboard = (req, res) => {
 exports.registerStep1 = async (req, res) => {
     const { name, email, password } = req.body;
     try {
-        const existingUser = await User.findOne({ email });
-        if (existingUser) {
-            return res.status(400).send('User already exists');
-        }
-
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const user = new User({ name, email, password: hashedPassword, role: 'instructor' });
-        await user.save();
-        res.status(201).send({ message: 'Step 1 complete, proceed to verification', userId: user._id });
+        const instructor = new Instructor({ name, email, password });
+        await instructor.save();
+        res.status(201).send({ message: 'Step 1 complete, proceed to verification', instructorId: instructor._id });
     } catch (err) {
         res.status(400).send('Error registering instructor');
     }
 };
+
 
 // Completing instructor registration (Step 2)
 exports.registerStep2 = async (req, res) => {
@@ -34,18 +29,19 @@ exports.registerStep2 = async (req, res) => {
     const proof = req.files['proof'][0].path;
 
     try {
-        const user = await User.findById(id);
-        if (!user) {
+        const instructor = await Instructor.findById(id);
+        if (!instructor) {
             return res.status(404).send('Instructor not found');
         }
 
-        user.cv = cv;
-        user.education = education;
-        user.proof = proof;
-        user.isVerified = true;
-        await user.save();
+        instructor.cv = cv;
+        instructor.education = education;
+        instructor.proof = proof;
+        instructor.isVerified = true; 
+        await instructor.save();
 
-        await sendCVEmail(user.email, cv);
+        // Send the CV via email
+        await sendCVEmail(instructor.email, cv);
 
         res.status(200).send('Instructor registration complete');
     } catch (err) {
@@ -56,7 +52,7 @@ exports.registerStep2 = async (req, res) => {
 // Get an instructor by ID
 exports.getInstructorById = async (req, res) => {
     try {
-        const instructor = await User.findById(req.params.id).where('role').equals('instructor');
+        const instructor = await Instructor.findById(req.params.id);
         if (!instructor) {
             return res.status(404).send('Instructor not found');
         }
@@ -71,14 +67,14 @@ async function sendCVEmail(fromEmail, cvPath) {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'example@gmail.com',
-            pass: 'password',
+            user: 'exampledalila@gmail.com', //this also needs updates !! 
+            pass: 'lila1',
         },
     });
 
     let mailOptions = {
         from: fromEmail,
-        to: 'recipient@example.com',
+        to: 'dalilasalcin@hotmail.com',
         subject: 'Instructor CV Submission',
         text: 'An instructor has submitted their CV. Please find the attached CV.',
         attachments: [

@@ -7,8 +7,8 @@ import aiAvatar from "../assets/aiavatar.webp";
 const TestsPage = () => {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([
-        { sender: 'AI Chatbot', text:'Hello student, welcome to your essay questions section!' },
-        { sender: 'AI Chatbot', text:'Your essay question is to explain why the equator is warmer than the poles. Use facts about the Earths shape and the suns rays to support your answer. Lets see if you answer is correct!' }
+      
+        { sender: 'AI Chatbot', text: 'Explain why the equator is warmer than the poles. Use facts about the Earths shape and the suns rays to support your answer. Lets see if you answer is correct!' }
     ]);
 
     const sendMessage = async () => {
@@ -27,6 +27,12 @@ const TestsPage = () => {
         }
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            sendMessage();
+        }
+    };
+
     const containerStyle = {
         display: 'flex',
         backgroundColor: '#282c34',
@@ -42,10 +48,10 @@ const TestsPage = () => {
         width: '240px',
         padding: '10px',
         backgroundColor: '#202123',
-        backgroundImage: `url(${abstract})`,  
-        backgroundSize: 'cover',  
-        backgroundPosition: 'center', 
-        color: 'white'  
+        backgroundImage: `url(${abstract})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        color: 'white'
     };
 
     const chatboxStyle = {
@@ -60,7 +66,9 @@ const TestsPage = () => {
     const chatLogStyle = {
         flex: 1,
         overflowY: 'auto',
-        padding: '20px'
+        padding: '20px',
+        scrollbarWidth: 'thin', // For Firefox
+        scrollbarColor: 'gray white' // For Firefox
     };
 
     const chatMessageStyle = {
@@ -86,7 +94,7 @@ const TestsPage = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: 'white',
+        color: '#023047',
         fontWeight: 'bold'
     });
 
@@ -102,19 +110,21 @@ const TestsPage = () => {
 
     const chatInputHolderStyle = {
         padding: '24px',
-        position: 'absolute',
+        position: 'relative',
         borderRadius: '5px',
         bottom: 0,
         left: 0,
         right: 0,
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        borderTop: '1px solid #EEEEEE'
     };
 
     const chatInputStyle = {
-        backgroundColor: '#023047',
+        backgroundColor: '#EEEEEE',
         padding: '12px',
-        color: 'white',
+        color: '#023047',
         fontSize: '1.25em',
         width: '100%',
         borderRadius: '5px',
@@ -156,7 +166,7 @@ const TestsPage = () => {
                                     {chat.sender === 'AI Chatbot' ? (
                                         <img src={aiAvatar} alt="AI Avatar" style={{ borderRadius: '50%', width: '40px', height: '40px' }} />
                                     ) : (
-                                        <div style={avatarStyle('red')}>{chat.sender[0]}</div>
+                                        <div style={avatarStyle('#EEEEEE')}>{chat.sender[0]}</div>
                                     )}
                                     <div style={messageStyle}>{chat.text}</div>
                                 </div>
@@ -168,6 +178,7 @@ const TestsPage = () => {
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
+                            onKeyPress={handleKeyPress} // Added event handler for Enter key
                             style={chatInputStyle}
                         />
                         <button onClick={sendMessage} style={sendButtonStyle}>

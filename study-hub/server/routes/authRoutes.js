@@ -3,9 +3,10 @@ const router = express.Router();
 const authController = require('../controllers/authController');
 
 // Register user
-router.post('/register', authController.registerUser);
+//router.post('/register', authController.registerUser);
 
 // Login user
 router.post('/login', authController.loginUser);
+
 
 module.exports = router;

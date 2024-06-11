@@ -27,7 +27,7 @@ function LoginPage() {
                 navigate('/dashboardInstructor');
             } else {
                 // Default or admin dashboard
-                navigate('/dashboardAdmin');
+                navigate('/dashboardAdministrator');
             }
         } catch (error) {
             setError(error.message || 'Error logging in');
