@@ -19,7 +19,7 @@ function Sidebar2({ toggleNav }) {  // Receive toggleNav as a prop
       <div id="mySidebar" className="sidebar" style={{ width: isOpen ? '250px' : '0' }}>
         <a href="javascript:void(0)" className="closebtn" onClick={handleToggleNav}>×</a>
         
-        <button className="button">Upload Material</button>
+        {/* <button className="button">Upload Material</button> */}
         <h2 className="sideMenuTitle">EXPLORE</h2>
         <Link to="/dashboardAdministrator" className='noLink'><p>Home</p></Link>
         <Link to="/adminInstructorsPage"  className='noLink'><p>Instructors</p></Link>
