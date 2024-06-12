@@ -438,6 +438,15 @@
   /* margin-top: 10px; */
 }
 
+.approvalBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+
 .pendingInstSection, .pendingCourseSection {
   width: 90%;
   height: auto;
@@ -1354,6 +1363,70 @@ label {
 .next2SideMenuDiv {
   height: fit-content;
 }
+
+/* INSTRUCTOR REQUEST APPROVAL */
+.instructorReq, .courseReq {
+  width: 90%;
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  height: 30px;
+  background-color: #c72b2b;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+
+}
+
+.instructorReq p {
+  margin: 0px;
+  color: #fff;
+}
+
+.courseReq p {
+  margin: 0px;
+  color: #fff;
+}
+
+.decisionDiv {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+}
+
+.accept, .decline {
+  width: 40%;
+  height: 50px;
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+
+}
+
+.accept {
+  background-color: #0a8524;
+}
+
+.accept p {
+  margin: 0px;
+}
+
+.decline p{
+  margin: 0px;
+}
+
+.decline {
+  background-color: #c72b2b;
+}
+
+
 
 
 
