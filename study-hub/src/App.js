@@ -40,6 +40,8 @@ import ModulePage from './pages/modulePage';
 import QuizInfo from './pages/QuizAnnouncement';
 import QuizPage from './pages/QuizPage';
 
+import ApprovalCoursePage from './pages/ApprovalCoursePage';
+
 
 function App() {
   return (
@@ -84,6 +86,8 @@ function App() {
       <Route path="/singularCoursePage" element={<SingularCoursePage />} />
       <Route path="/singularCoursePageAdmin" element={<SingularCoursePageAdmin />} />
       <Route path="/singularCoursePageInstructor" element={<SingularCoursePageInstructor />} />
+      <Route path="/approvalCoursePage" element={<ApprovalCoursePage />} />
+
 
 
 
