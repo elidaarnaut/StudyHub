@@ -40,7 +40,7 @@ app.use('/api/students', studentRoutes);
 app.use('/api/instructors', instructorRoutes);
 
 // Chatbot routes
-app.use('/api/chatbot', chatbotRoutes); // Ensure this line is correct
+app.use('/chatbot', chatbotRoutes);// Ensure this line is correct
 
 // Auth routes
 app.use('/api/auth', authRoutes); // Add authRoutes

@@ -3,6 +3,8 @@ const OpenAI = require('openai');
 const router = express.Router();
 require('dotenv').config();
 
+
+
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 router.post('/', async (req, res) => {
@@ -13,7 +15,7 @@ router.post('/', async (req, res) => {
         const response = await openai.chat.completions.create({
             model: 'gpt-3.5-turbo',
             messages: [
-                { role: 'system', content: 'You are teacher to elementary school kids' },
+                { role: 'system', content: 'You are a helpful assistant.' },
                 { role: 'user', content: message }
             ],
         });
