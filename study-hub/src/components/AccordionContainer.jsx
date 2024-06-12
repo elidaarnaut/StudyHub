@@ -11,14 +11,14 @@ const AccordionContainer = () => {
 
     return (
         <div>
-            <Accordion title="Section 1" isOpen={openIndex === 0} onToggle={() => handleToggle(0)}>
-                <p>This is the content for section 1.</p>
+            <Accordion title="What is StudyHub?" isOpen={openIndex === 0} onToggle={() => handleToggle(0)}>
+                <p>StudyHub is an advanced e-learning platform designed to bridge the gap between traditional education methods and modern technological advancements. It offers a dynamic, user-friendly, and accessible learning environment for students and instructors.</p>
             </Accordion>
-            <Accordion title="Section 2" isOpen={openIndex === 1} onToggle={() => handleToggle(1)}>
-                <p>This is the content for section 2.</p>
+            <Accordion title="Can I access StudyHub courses on my mobile device?" isOpen={openIndex === 1} onToggle={() => handleToggle(1)}>
+                <p>Yes, StudyHub is designed to be fully responsive and accessible on various devices including desktops, tablets, and smartphones, ensuring a seamless learning experience on any device.</p>
             </Accordion>
-            <Accordion title="Section 3" isOpen={openIndex === 2} onToggle={() => handleToggle(2)}>
-                <p>This is the content for section 3.</p>
+            <Accordion title="What special features does StudyHub offer?" isOpen={openIndex === 2} onToggle={() => handleToggle(2)}>
+                <p>StudyHub integrates cutting-edge AI technology to enhance learning and teaching experiences. Features include AI-driven language learning, virtual labs, and automated grading and feedback systems.</p>
             </Accordion>
         </div>
     );

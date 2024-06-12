@@ -23,7 +23,7 @@ function CreateCourse() {
     };
 
     return (
-        <div>
+        <div className='courseCreateMain'>
             <TopMenu4></TopMenu4>
             <div className='next2SideMenuDiv'>
             <div className="create-course-container">
