@@ -1228,10 +1228,16 @@ label {
  /* CREATE COURSE */
 
  .create-course-container {
-  max-width: 600px;
+  width: 70%;
   margin: 20px auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.courseCreateMain {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
 }
 
 .create-course-form {
@@ -1259,15 +1265,16 @@ label {
 
 .submit-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #D03D18;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #c72b2b;
 }
 
 /* SINGULAR COURSE PAGE  */
