@@ -562,8 +562,9 @@
 .profileSides2, .profileSides3  {
   width: 35%;
   display: flex;
-  justify-self: center;
-  align-self: center;
+  /* justify-self: flex-start; */
+  flex-direction: column;
+  /* align-self: flex-start; */
   height: 320px;
   overflow: hidden;
   position: relative;
@@ -579,7 +580,7 @@
   background-color: #EEEEEE;
   border-radius: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 20px;
   position: relative;
@@ -587,7 +588,7 @@
 }
 
 .profileBadgeImg {
-  width: 40%;
+  width: 50%;
   padding: 10px;
 }
 
@@ -599,7 +600,7 @@
 
 .profilePic {
   /* z-index: 4; */
-  border-radius: 50px;
+  border-radius: 100px;
 }
 
 .profileName {
@@ -623,7 +624,7 @@
 
 .badgesContainer{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -635,6 +636,7 @@
 .profileSides2 p{
   font-weight: 700;
   font-size: 20px;
+  margin: 0px;
 }
 
 .overlayProfile {
@@ -661,6 +663,7 @@
   top: 60px;
   height: calc(100vh - 60px);
   margin-top: 60px;
+  height: fit-content;
  
 }
 

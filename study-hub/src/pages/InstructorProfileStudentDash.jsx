@@ -1,7 +1,7 @@
 import React from "react";
 import TopMenu2 from "../components/TopMenu2";
 import banner from "../assets/banner.svg";
-import profilePic from "../assets/person5.jpg"; // Use Emily's actual profile picture
+import profilePic from "../assets/person5.jpg"; // Assuming this is correct
 import CourseCard from "../components/CourseCard";
 
 const courses = [
@@ -11,7 +11,7 @@ const courses = [
         instructorName: "Emily Cartwright",
         instructorEmail: "emily.cartwright@edututors.com",
         instructorImg: profilePic,
-        price:40
+        price: 40
     },
     {
         title: "AP Mathematics Preparation",
@@ -19,8 +19,7 @@ const courses = [
         instructorName: "Emily Cartwright",
         instructorEmail: "emily.cartwright@edututors.com",
         instructorImg: profilePic,
-        price:40
-
+        price: 40
     },
     {
         title: "Interactive Mathematics Workshops",
@@ -28,8 +27,7 @@ const courses = [
         instructorName: "Emily Cartwright",
         instructorEmail: "emily.cartwright@edututors.com",
         instructorImg: profilePic,
-        price:40
-
+        price: 40
     }
 ];
 
@@ -39,7 +37,7 @@ function InstructorProfileStudentDash(){
             <TopMenu2 />
             <div className="next2SideMenuDivProfile">
                 <img src={banner} alt="Banner" className="banner" />
-                <div className="ProfilePicDiv">                
+                <div className="ProfilePicDiv">
                     <img src={profilePic} alt="Emily Cartwright" className="profilePic"/>
                 </div>
                 <div className="profileContents">
@@ -49,7 +47,7 @@ function InstructorProfileStudentDash(){
                     </div>
                     <div className="profileSides3 sectionDiv">
                         <p className="profileBio">Bio</p>
-                        <div className="profileBioText ">
+                        <div className="profileBioText">
                             Emily holds a Master’s degree in Mathematics from the University of Cambridge. She has extensive experience as a high school math teacher and has been involved in curriculum development for advanced placement courses. Emily also regularly participates in math workshops and symposiums as a guest speaker.
                         </div>
                     </div>
@@ -58,8 +56,8 @@ function InstructorProfileStudentDash(){
                     <h1 className="instructorsTitle">Emily's Courses</h1>
                     <hr className="hrDash" />
                     <div className="coursesCardLayout">
-                        {courses.map(course => (
-                            <CourseCard key={course.title} {...course} />
+                        {courses.map((course, index) => (
+                            <CourseCard key={index} {...course} />
                         ))}
                     </div>
                 </div>

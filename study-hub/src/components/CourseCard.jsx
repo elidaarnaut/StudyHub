@@ -1,45 +1,22 @@
 import React from "react";
-import { useUser } from "../contexts/UserContext";  // Make sure the import path is correct
 import { useNavigate } from "react-router-dom";
 
-function CourseCard({ title, description, instructorName, instructorEmail, instructorImg, price }) {
-    const { user, loading } = useUser();
+function CourseCard({ title, description, instructorName, instructorEmail, image, price }) {
     const navigate = useNavigate();
 
     const handleMoreInfoClick = () => {
-        if (loading) {
-            console.log("Loading user data...");
-            return;
-        }
-
-        if (!user) {
-            console.log("No user data available.");
-            return;
-        }
-
-        switch (user.role) {
-            case 'admin':
-                navigate('/singularCoursePageAdmin');
-                break;
-            case 'instructor':
-                navigate('/singularCoursePageInstructor');
-                break;
-            case 'student':
-            default:
-                navigate('/singularCoursePage');
-                break;
-        }
+        navigate('/singularCoursePage'); // Modify this URL based on your actual routing needs
     };
 
     return (
         <div className="courseCard">
             <div className="CCPictureSection">
                 <div className="courseInstructorImg">
-                    <img src={instructorImg} alt={instructorName} />
+                    <img src={image} alt={instructorName} onError={(e) => e.target.src = 'defaultImage.jpg'} />
                 </div>
                 <p className="instructorNameCC">{instructorName}</p>
                 <div className="CCPriceBox">
-                    <p>Price: ${price}</p>  {/* Display the price */}
+                    <p>Price: ${price}</p>
                 </div>
             </div>
             <div className="CCText">
