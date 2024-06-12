@@ -15,7 +15,7 @@ const courseData = [
         instructorName: "Emily Cartwright",
         instructorEmail: "emily.cartwright@edututors.com",
         image: person5,
-        price: 200
+        price: 40
     },
     {
         title: "Organic Chemistry Fundamentals",
